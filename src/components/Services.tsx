@@ -5,53 +5,53 @@ const Services = () => {
   const services = [
     {
       icon: Shield,
-      title: 'Čisté prostory',
-      description: 'Provádíme kompletní dodávky a montáž vzduchotechniky, vzduchotechnických filtrů včetně filtrů atypických dělaných na míru dle potřeb zákazníka.',
-      features: ['HEPA filtry na míru', 'Kompletní montáž', 'Certifikace ISO']
+      title: 'Farmaceutické čisté prostory',
+      description: 'Specializujeme se na kompletní realizaci čistých prostorů pro farmaceutický průmysl podle norem EU GMP, WHO GMP a ISO 14644. Dodáváme a instalujeme vzduchotechniku, HEPA filtry H13/H14, včetně atypických filtrů na míru podle specifických požadavků zákazníka.',
+      features: ['HEPA filtry H13/H14 na míru', 'Certifikace EU GMP, WHO GMP', 'ISO 14644 compliance', 'Kompletní dokumentace']
     },
     {
       icon: Thermometer,
-      title: 'Klimatizace',
-      description: 'Uvedení zařízení do provozu včetně zpracování příslušných dokladů pro kolaudaci a následnou validaci všechny opravy stávajících vzduchotechnických rozvodů.',
-      features: ['Uvedení do provozu', 'Kolaudační doklady', 'Opravy rozvodů']
+      title: 'HVAC systémy a klimatizace',
+      description: 'Navrhujeme, dodáváme a uvádíme do provozu pokročilé HVAC systémy pro kontrolované prostředí. Zajišťujeme zpracování příslušných dokladů pro kolaudaci, validaci a dlouhodobý provoz klimatizačních jednotek v souladu s platnými normami.',
+      features: ['Návrh HVAC systémů', 'Uvedení do provozu', 'Kolaudační dokumentace', 'Preventivní údržba', 'Energetická optimalizace']
     },
     {
       icon: Users,
-      title: 'Poradenská činnost',
-      description: 'Naše společnost zajišťuje servis vzduchotechniky včetně dodávek HEPA filtrů, jejich výměn a atestu.',
-      features: ['Odborné poradenství', 'Servis HEPA filtrů', 'Atestace zařízení']
+      title: 'Odborné poradenství a konzultace',
+      description: 'Poskytujeme expertní poradenskou činnost v oblasti čistých prostorů, vzduchotechniky a klimatizace s důrazem na compliance s mezinárodními normami. Naši specialisté pomáhají s optimalizací provozu a energetickou efektivností.',
+      features: ['GMP compliance poradenství', 'Energetické audity', 'Optimalizace provozu', 'Školení personálu', 'Technická podpora 24/7']
     },
     {
       icon: Settings,
-      title: 'Služby',
-      description: 'Uvedení zařízení do provozu včetně zpracování příslušných dokladů pro kolaudaci a následnou validaci všechny opravy stávajících vzduchotechnických rozvodů.',
-      features: ['Komplexní servis', 'Preventivní údržba', 'Rychlá reakce']
+      title: 'Komplexní servis a údržba',
+      description: 'Poskytujeme komplexní servisní služby zahrnující pravidelnou údržbu vzduchotechnických zařízení, výměnu HEPA filtrů, jejich testování a certifikaci. Zajišťujeme rychlou odezvu při poruchách a preventivní servisní programy.',
+      features: ['Pravidelná údržba VZT', 'Výměna HEPA filtrů', 'Certifikace a testování', 'Pohotovostní služba', 'Servisní smlouvy']
     },
     {
       icon: Gauge,
-      title: 'Validace a měření',
-      description: 'Zajišťujeme měření, validace a servis čistého prostoru. Veškeré měření je prováděno špičkovými certifikovanými přístroji s pravidelným servisem a kalibrací.',
-      features: ['Certifikované přístroje', 'Pravidelná kalibrace', 'Kompletní dokumentace']
+      title: 'Validace, měření a kalibrace',
+      description: 'Provádíme validaci čistých prostorů podle mezinárodních norms včetně DQ, IQ, OQ, PQ kvalifikací. Měření provádíme certifikovanými přístroji s akreditovanou kalibrací. Zajišťujeme kompletní dokumentaci pro regulatorní orgány.',
+      features: ['DQ/IQ/OQ/PQ kvalifikace', 'Akreditované měření', 'Certifikované přístroje', 'Regulatorní dokumentace', 'Revalidace a údržba']
     },
     {
       icon: Wind,
-      title: 'Vzduchotechnika',
-      description: 'Kompletní poradenskou činnost ohledně vzduchotechniky a klimatizace s důrazem na energetickou efektivnost a spolehlivost provozu.',
-      features: ['Energetická efektivnost', 'Spolehlivý provoz', 'Odborné poradenství']
+      title: 'Vzduchotechnika pro čisté prostory',
+      description: 'Komplexní řešení vzduchotechniky pro farmaceutické provozy, nemocnice a laboratoře. Specializujeme se na návrh, dodávku a montáž vzduchotechnických systémů s důrazem na energetickou efektivnost, spolehlivost a soulad s GMP normami.',
+      features: ['Návrh VZT systémů', 'GMP compliance', 'Energetická efektivnost', 'Laminar air flow', 'Diferenční tlaky']
     }
   ];
 
   return (
     <section id="sluzby" className="py-20 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+        {/* SEO optimized section header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Naše <span className="text-primary">služby</span>
+            Profesionální <span className="text-primary">služby pro čisté prostory</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Poskytujeme komplexní řešení pro čisté prostory s důrazem na kvalitu, 
-            přesnost a dlouhodobou spolehlivost
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Poskytujeme <strong>komplexní řešení čistých prostorů pro farmaceutický průmysl, nemocnice a laboratoře</strong> včetně 
+            vzduchotechniky, HEPA filtrů, validace a servisu v souladu s normami EU GMP, WHO GMP a ISO 14644
           </p>
         </div>
 

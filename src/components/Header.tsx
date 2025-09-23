@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logoIcon from '@/assets/logo-icon.png';
+import logoImage from '@/assets/cisteprostory-logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,17 +18,13 @@ const Header = () => {
     <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
+          {/* SEO optimized logo */}
+          <div className="flex items-center">
             <img 
-              src={logoIcon} 
-              alt="Čisté Prostory" 
-              className="h-8 w-8"
+              src={logoImage} 
+              alt="Čisté Prostory - Vzduchotechnika, HEPA filtry, validace" 
+              className="h-10 w-auto"
             />
-            <div className="flex flex-col">
-              <span className="text-lg font-bold text-primary">ČISTÉ</span>
-              <span className="text-lg font-bold text-foreground -mt-1">PROSTORY.EU</span>
-            </div>
           </div>
 
           {/* Desktop Navigation */}

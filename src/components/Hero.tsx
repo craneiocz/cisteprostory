@@ -13,17 +13,16 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center">
-          {/* Main Heading */}
+          {/* SEO optimized main heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Čisté prostory
+            Čisté prostory pro
             <br />
-            <span className="text-primary-light">na míru</span>
+            <span className="text-primary-light">farmaceutický průmysl</span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Specializujeme se na vzduchotechniku, měření, validaci a servis čistých prostorů 
-            pro farmaceutický a technologický průmysl
+          {/* SEO enhanced subtitle with key services */}
+          <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed">
+            Specializujeme se na <strong>vzduchotechniku čistých prostorů, HEPA filtry, měření čistoty vzduchu, validaci</strong> a komplexní servis pro farmaceutické společnosti, nemocnice a laboratoře v České republice a na Slovensku
           </p>
 
           {/* CTA Buttons */}
@@ -32,7 +31,7 @@ const Hero = () => {
               size="lg" 
               className="bg-white text-primary hover:bg-white/90 shadow-elegant text-lg px-8 py-6"
             >
-              Nezávazná poptávka
+              Nezávazná poptávka HEPA filtrů
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button 
@@ -40,7 +39,7 @@ const Hero = () => {
               variant="outline" 
               className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6"
             >
-              Naše služby
+              Vzduchotechnika a validace
             </Button>
           </div>
 
@@ -50,28 +49,28 @@ const Hero = () => {
               <div className="bg-white/10 p-4 rounded-2xl mb-3 group-hover:bg-white/20 transition-colors duration-300">
                 <Shield className="h-8 w-8 text-white" />
               </div>
-              <span className="text-sm font-medium text-white/90">Čisté prostory</span>
+              <span className="text-sm font-medium text-white/90">Farmaceutické čisté prostory</span>
             </div>
             
             <div className="flex flex-col items-center group">
               <div className="bg-white/10 p-4 rounded-2xl mb-3 group-hover:bg-white/20 transition-colors duration-300">
                 <Wind className="h-8 w-8 text-white" />
               </div>
-              <span className="text-sm font-medium text-white/90">Vzduchotechnika</span>
+              <span className="text-sm font-medium text-white/90">HVAC &amp; klimatizace</span>
             </div>
             
             <div className="flex flex-col items-center group">
               <div className="bg-white/10 p-4 rounded-2xl mb-3 group-hover:bg-white/20 transition-colors duration-300">
                 <Gauge className="h-8 w-8 text-white" />
               </div>
-              <span className="text-sm font-medium text-white/90">Měření & validace</span>
+              <span className="text-sm font-medium text-white/90">Validace &amp; kalibrace</span>
             </div>
             
             <div className="flex flex-col items-center group">
               <div className="bg-white/10 p-4 rounded-2xl mb-3 group-hover:bg-white/20 transition-colors duration-300">
                 <Settings className="h-8 w-8 text-white" />
               </div>
-              <span className="text-sm font-medium text-white/90">Servis</span>
+              <span className="text-sm font-medium text-white/90">Servis HEPA filtrů</span>
             </div>
           </div>
         </div>
