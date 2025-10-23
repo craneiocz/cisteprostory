@@ -15,33 +15,15 @@ const Hero = () => {
         <div className="text-center">
           {/* SEO optimized main heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Čisté prostory pro
+            Čisté prostory
             <br />
-            <span className="text-primary-light">farmaceutický průmysl</span>
+            <span className="text-primary-light">pro váš průmysl</span>
           </h1>
 
           {/* SEO enhanced subtitle with key services */}
-          <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed">
-            Specializujeme se na <strong>vzduchotechniku čistých prostorů, HEPA filtry, měření čistoty vzduchu, validaci</strong> a komplexní servis pro farmaceutické společnosti, nemocnice a laboratoře v České republice a na Slovensku
+          <p className="text-xl md:text-2xl mb-16 text-white/90 max-w-4xl mx-auto leading-relaxed">
+            Specializujeme se na <strong>vzduchotechniku čistých prostorů, HEPA filtry, měření čistoty vzduchu, validaci</strong> a komplexní servis pro farmacie, nemocnice, laboratoře, elektroniku, automotive a vesmírný průmysl v České republice a na Slovensku
           </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button 
-              size="lg" 
-              className="bg-white text-primary hover:bg-white/90 shadow-elegant text-lg px-8 py-6"
-            >
-              Nezávazná poptávka HEPA filtrů
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6"
-            >
-              Vzduchotechnika a validace
-            </Button>
-          </div>
 
           {/* Services Icons */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">

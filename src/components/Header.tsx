@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import logoImage from '@/assets/cisteprostory-logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: 'Čisté prostory', href: '#ciste-prostory' },
-    { name: 'Vzduchotechnika', href: '#vzduchotechnika' },
-    { name: 'Měření a validace', href: '#mereni-validace' },
-    { name: 'Servis', href: '#servis' },
-    { name: 'Služby', href: '#sluzby' },
+    { name: 'Čisté prostory', href: '/ciste-prostory' },
+    { name: 'Vzduchotechnika', href: '/vzduchotechnika' },
+    { name: 'Měření a validace', href: '/mereni-a-validace' },
+    { name: 'Servis', href: '/servis' },
   ];
 
   return (
@@ -19,31 +19,31 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* SEO optimized logo */}
-          <div className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img 
               src={logoImage} 
               alt="Čisté Prostory - Vzduchotechnika, HEPA filtry, validace" 
               className="h-10 w-auto"
             />
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
           {/* Contact Button */}
           <div className="hidden md:flex">
-            <Button variant="default" className="bg-gradient-hero shadow-elegant">
-              Kontakt
+            <Button asChild variant="default" className="bg-gradient-hero shadow-elegant">
+              <a href="/#kontakt">Kontakt</a>
             </Button>
           </div>
 
@@ -64,17 +64,17 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-sm">
             <nav className="flex flex-col space-y-4">
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium px-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
-              <Button variant="default" className="bg-gradient-hero shadow-elegant mx-2 mt-4">
-                Kontakt
+              <Button asChild variant="default" className="bg-gradient-hero shadow-elegant mx-2 mt-4">
+                <a href="/#kontakt">Kontakt</a>
               </Button>
             </nav>
           </div>

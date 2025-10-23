@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Contact = () => {
   return (
-    <section className="py-20 lg:py-32 bg-accent/30">
+    <section id="kontakt" className="py-20 lg:py-32 bg-accent/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -74,32 +74,82 @@ const Contact = () => {
             </Card>
           </div>
 
-          {/* CTA Section */}
+          {/* Contact Form */}
           <div className="flex flex-col justify-center">
-            <Card className="bg-gradient-hero text-white border-0 shadow-elegant">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4">
-                  Potřebujete rychlou nabídku?
-                </h3>
-                <p className="text-white/90 mb-8 leading-relaxed">
-                  Kontaktujte nás ještě dnes a získejte nezávaznou cenovou nabídku 
-                  na míru vašim požadavkům. Naši specialisté vám rádi poradí.
-                </p>
-                <div className="space-y-4">
+            <Card className="bg-gradient-card border-0 shadow-card">
+              <CardHeader>
+                <CardTitle className="text-2xl text-foreground">Kontaktní formulář</CardTitle>
+              </CardHeader>
+              <CardContent className="p-8">
+                <form className="space-y-6" onSubmit={(e) => {
+                  e.preventDefault();
+                  // TODO: Add form submission logic
+                  alert('Děkujeme za váš zájem. V brzké době vás budeme kontaktovat.');
+                }}>
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                      Jméno a příjmení *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                      placeholder="Jan Novák"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                      E-mail *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                      placeholder="jan.novak@example.com"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                      Telefon *
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      required
+                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                      placeholder="+420 123 456 789"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                      Zpráva *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={5}
+                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                      placeholder="Napište nám váš dotaz..."
+                    />
+                  </div>
+
                   <Button 
+                    type="submit"
                     size="lg" 
-                    className="bg-white text-primary hover:bg-white/90 w-full text-lg py-6"
+                    className="w-full bg-primary hover:bg-primary-dark text-white text-lg py-6"
                   >
-                    Získat cenovou nabídku
+                    Odeslat
                   </Button>
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-primary w-full text-lg py-6"
-                  >
-                    Zavolat nyní
-                  </Button>
-                </div>
+                </form>
               </CardContent>
             </Card>
           </div>
