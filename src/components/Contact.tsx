@@ -27,7 +27,7 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg font-medium text-foreground">+420 123 456 789</p>
+                <p className="text-lg font-medium text-foreground">+420 987 654 321</p>
                 <p className="text-muted-foreground">Pondělí - Pátek: 8:00 - 17:00</p>
               </CardContent>
             </Card>
