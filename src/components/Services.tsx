@@ -1,4 +1,4 @@
-import { Shield, Wind, Gauge, Settings, Thermometer, Users } from 'lucide-react';
+import { Shield, Wind, Gauge, Settings, Thermometer, BookOpen } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Services = () => {
@@ -6,38 +6,38 @@ const Services = () => {
     {
       icon: Shield,
       title: 'Farmaceutické čisté prostory',
-      description: 'Specializujeme se na kompletní realizaci čistých prostorů pro farmaceutický průmysl podle norem EU GMP, WHO GMP a ISO 14644. Dodáváme a instalujeme vzduchotechniku, HEPA filtry H13/H14, včetně atypických filtrů na míru podle specifických požadavků zákazníka.',
-      features: ['HEPA filtry H13/H14 na míru', 'Certifikace EU GMP, WHO GMP', 'ISO 14644 compliance', 'Kompletní dokumentace']
-    },
-    {
-      icon: Thermometer,
-      title: 'HVAC systémy a klimatizace',
-      description: 'Navrhujeme, dodáváme a uvádíme do provozu pokročilé HVAC systémy pro kontrolované prostředí. Zajišťujeme zpracování příslušných dokladů pro kolaudaci, validaci a dlouhodobý provoz klimatizačních jednotek v souladu s platnými normami.',
-      features: ['Návrh HVAC systémů', 'Uvedení do provozu', 'Kolaudační dokumentace', 'Preventivní údržba', 'Energetická optimalizace']
-    },
-    {
-      icon: Users,
-      title: 'Odborné poradenství a konzultace',
-      description: 'Poskytujeme expertní poradenskou činnost v oblasti čistých prostorů, vzduchotechniky a klimatizace s důrazem na compliance s mezinárodními normami. Naši specialisté pomáhají s optimalizací provozu a energetickou efektivností.',
-      features: ['GMP compliance poradenství', 'Energetické audity', 'Optimalizace provozu', 'Školení personálu', 'Technická podpora 24/7']
-    },
-    {
-      icon: Settings,
-      title: 'Komplexní servis a údržba',
-      description: 'Poskytujeme komplexní servisní služby zahrnující pravidelnou údržbu vzduchotechnických zařízení, výměnu HEPA filtrů, jejich testování a certifikaci. Zajišťujeme rychlou odezvu při poruchách a preventivní servisní programy.',
-      features: ['Pravidelná údržba VZT', 'Výměna HEPA filtrů', 'Certifikace a testování', 'Pohotovostní služba', 'Servisní smlouvy']
-    },
-    {
-      icon: Gauge,
-      title: 'Validace, měření a kalibrace',
-      description: 'Provádíme validaci čistých prostorů podle mezinárodních norms včetně DQ, IQ, OQ, PQ kvalifikací. Měření provádíme certifikovanými přístroji s akreditovanou kalibrací. Zajišťujeme kompletní dokumentaci pro regulatorní orgány.',
-      features: ['DQ/IQ/OQ/PQ kvalifikace', 'Akreditované měření', 'Certifikované přístroje', 'Regulatorní dokumentace', 'Revalidace a údržba']
+      description: 'Zajišťujeme kompletní realizaci a údržbu čistých prostorů pro farmaceutický průmysl v souladu s ISO 14644 – Čisté prostory a související řízená prostředí, EU GMP standardy a příslušnými normami pro filtry.',
+      features: ['Návrh a realizace podle ISO 14644 a EU GMP požadavků', 'Validace čistých prostor', 'Certifikace a dokumentace']
     },
     {
       icon: Wind,
       title: 'Vzduchotechnika pro čisté prostory',
-      description: 'Komplexní řešení vzduchotechniky pro farmaceutické provozy, nemocnice a laboratoře. Specializujeme se na návrh, dodávku a montáž vzduchotechnických systémů s důrazem na energetickou efektivnost, spolehlivost a soulad s GMP normami.',
-      features: ['Návrh VZT systémů', 'GMP compliance', 'Energetická efektivnost', 'Laminar air flow', 'Diferenční tlaky']
+      description: 'Projektujeme, dodáváme a instalujeme specializované vzduchotechnické systémy s HEPA a ULPA filtrací pro maximální čistotu vzduchu v souladu s normami ISO 14644 a příslušnými normami pro filtry.',
+      features: ['HEPA a ULPA filtry třídy H13, H14, U15', 'Laminární boxy a komory', 'Klimatizační jednotky s regulací']
+    },
+    {
+      icon: Gauge,
+      title: 'Validace, měření a kalibrace',
+      description: 'Provádíme profesionální měření čistoty vzduchu, validace a kalibrace čistých prostor podle ISO 14644, EU GMP a příslušných norem pro filtry.',
+      features: ['Měření počtu částic a mikrobiologické kontroly', 'Kvalifikace IQ, OQ, PQ', 'Testy integrity filtrů a systémů']
+    },
+    {
+      icon: Settings,
+      title: 'Komplexní servis a údržba',
+      description: 'Nabízíme pravidelný servis, údržbu a výměnu HEPA filtrů včetně kompletního technického zázemí a havarijní služby v souladu s požadavky na filtry.',
+      features: ['Pravidelná údržba HEPA systémů', 'Výměna a renovace filtrů', 'Pohotovostní servis 24/7']
+    },
+    {
+      icon: BookOpen,
+      title: 'Odborné poradenství a konzultace',
+      description: 'Poskytujeme expertní poradenství při návrhu, optimalizaci a provozu čistých prostor pro různá průmyslová odvětví v souladu s ISO 14644 a EU GMP.',
+      features: ['Konzultace pro ISO a EU GMP compliance', 'Optimalizace provozu a nákladů', 'Školení personálu']
+    },
+    {
+      icon: Thermometer,
+      title: 'HVAC systémy a klimatizace',
+      description: 'Dodáváme a servisujeme komplexní HVAC systémy s přesnou kontrolou teploty, vlhkosti a čistoty vzduchu pro kritické prostory podle ISO 14644.',
+      features: ['Klimatizační systémy s řízenou vlhkostí', 'Regulace tlakových gradientů', 'Monitoring a automatizace']
     }
   ];
 
@@ -51,7 +51,7 @@ const Services = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Poskytujeme <strong>komplexní řešení čistých prostorů pro farmaceutický průmysl, nemocnice a laboratoře</strong> včetně 
-            vzduchotechniky, HEPA filtrů, validace a servisu v souladu s normami EU GMP, WHO GMP a ISO 14644
+            vzduchotechniky, HEPA filtrů, validace a servisu v souladu s normami ISO 14644 – Čisté prostory a související řízená prostředí, EU GMP a příslušnými normami pro filtry
           </p>
         </div>
 

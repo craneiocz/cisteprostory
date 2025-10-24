@@ -17,7 +17,7 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             Čisté prostory
             <br />
-            <span className="text-primary-light">pro váš průmysl</span>
+            <span className="text-white">pro váš průmysl</span>
           </h1>
 
           {/* SEO enhanced subtitle with key services */}
@@ -27,33 +27,33 @@ const Hero = () => {
 
           {/* Services Icons */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div className="flex flex-col items-center group">
+            <a href="/ciste-prostory" className="flex flex-col items-center group">
               <div className="bg-white/10 p-4 rounded-2xl mb-3 group-hover:bg-white/20 transition-colors duration-300">
                 <Shield className="h-8 w-8 text-white" />
               </div>
-              <span className="text-sm font-medium text-white/90">Farmaceutické čisté prostory</span>
-            </div>
+              <span className="text-sm font-medium text-white/90">Čisté prostory</span>
+            </a>
             
-            <div className="flex flex-col items-center group">
+            <a href="/vzduchotechnika" className="flex flex-col items-center group">
               <div className="bg-white/10 p-4 rounded-2xl mb-3 group-hover:bg-white/20 transition-colors duration-300">
                 <Wind className="h-8 w-8 text-white" />
               </div>
-              <span className="text-sm font-medium text-white/90">HVAC &amp; klimatizace</span>
-            </div>
+              <span className="text-sm font-medium text-white/90">Vzduchotechnika</span>
+            </a>
             
-            <div className="flex flex-col items-center group">
+            <a href="/mereni-a-validace" className="flex flex-col items-center group">
               <div className="bg-white/10 p-4 rounded-2xl mb-3 group-hover:bg-white/20 transition-colors duration-300">
                 <Gauge className="h-8 w-8 text-white" />
               </div>
-              <span className="text-sm font-medium text-white/90">Validace &amp; kalibrace</span>
-            </div>
+              <span className="text-sm font-medium text-white/90">Měření a validace</span>
+            </a>
             
-            <div className="flex flex-col items-center group">
+            <a href="/servis" className="flex flex-col items-center group">
               <div className="bg-white/10 p-4 rounded-2xl mb-3 group-hover:bg-white/20 transition-colors duration-300">
                 <Settings className="h-8 w-8 text-white" />
               </div>
-              <span className="text-sm font-medium text-white/90">Servis HEPA filtrů</span>
-            </div>
+              <span className="text-sm font-medium text-white/90">Servis</span>
+            </a>
           </div>
         </div>
       </div>

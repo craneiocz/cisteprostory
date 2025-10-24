@@ -81,6 +81,7 @@ const Contact = () => {
                 <CardTitle className="text-2xl text-foreground">Kontaktní formulář</CardTitle>
               </CardHeader>
               <CardContent className="p-8">
+                <p className="text-sm text-muted-foreground mb-4">* = povinný údaj</p>
                 <form className="space-y-6" onSubmit={(e) => {
                   e.preventDefault();
                   // TODO: Add form submission logic
@@ -116,13 +117,12 @@ const Contact = () => {
 
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                      Telefon *
+                      Telefon
                     </label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
-                      required
                       className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                       placeholder="+420 123 456 789"
                     />
