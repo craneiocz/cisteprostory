@@ -16,17 +16,22 @@ const Hero = () => {
           {/* SEO optimized main heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             Čisté prostory
-            <br />
-            <span className="text-white">pro váš průmysl</span>
           </h1>
 
           {/* SEO enhanced subtitle with key services */}
           <p className="text-xl md:text-2xl mb-16 text-white/90 max-w-4xl mx-auto leading-relaxed">
-            Specializujeme se na <strong>vzduchotechniku čistých prostorů, HEPA filtry, měření čistoty vzduchu, validaci</strong> a komplexní servis pro farmacie, nemocnice, laboratoře, elektroniku, automotive a vesmírný průmysl v České republice a na Slovensku
+            Specializujeme se na <strong>vzduchotechniku čistých prostorů, HEPA filtry, měření čistoty vzduchu, validaci</strong> a komplexní servis pro farmacie, nemocnice, laboratoře, elektroniku, automotive a vesmírný průmysl v souladu s normami <strong>ISO 14644-1, ISO 14644-2, EU GMP Annex 1 a EN 1822</strong>
           </p>
 
           {/* Services Icons */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <a href="/mereni-a-validace" className="flex flex-col items-center group">
+              <div className="bg-white/10 p-4 rounded-2xl mb-3 group-hover:bg-white/20 transition-colors duration-300">
+                <Gauge className="h-8 w-8 text-white" />
+              </div>
+              <span className="text-sm font-medium text-white/90">Validace a měření</span>
+            </a>
+            
             <a href="/ciste-prostory" className="flex flex-col items-center group">
               <div className="bg-white/10 p-4 rounded-2xl mb-3 group-hover:bg-white/20 transition-colors duration-300">
                 <Shield className="h-8 w-8 text-white" />
@@ -39,13 +44,6 @@ const Hero = () => {
                 <Wind className="h-8 w-8 text-white" />
               </div>
               <span className="text-sm font-medium text-white/90">Vzduchotechnika</span>
-            </a>
-            
-            <a href="/mereni-a-validace" className="flex flex-col items-center group">
-              <div className="bg-white/10 p-4 rounded-2xl mb-3 group-hover:bg-white/20 transition-colors duration-300">
-                <Gauge className="h-8 w-8 text-white" />
-              </div>
-              <span className="text-sm font-medium text-white/90">Měření a validace</span>
             </a>
             
             <a href="/servis" className="flex flex-col items-center group">

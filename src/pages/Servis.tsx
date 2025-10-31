@@ -1,6 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Wrench, Users, Calendar, Award } from 'lucide-react';
+import { Wrench, Users, Calendar, Award, ShieldCheck } from 'lucide-react';
 
 const Servis = () => {
   return (
@@ -78,15 +78,15 @@ const Servis = () => {
             <ul className="space-y-3 text-lg text-muted-foreground">
               <li className="flex items-start">
                 <span className="text-primary mr-3">•</span>
-                <span>Pravidelnou údržbu vzduchotechnických systémů</span>
+                <span>Pravidelnou údržbu vzduchotechnických systémů a měření výkonu VZT</span>
               </li>
               <li className="flex items-start">
                 <span className="text-primary mr-3">•</span>
-                <span>Výměnu a servis HEPA a ULPA filtrů</span>
+                <span>Výměnu a servis HEPA a ULPA filtrů podle normy EN 1822</span>
               </li>
               <li className="flex items-start">
                 <span className="text-primary mr-3">•</span>
-                <span>Kontrolu a zaregulování vzduchotechnických jednotek</span>
+                <span>Kontrolu a zaregulování vzduchotechnických jednotek včetně teploty a vlhkosti</span>
               </li>
               <li className="flex items-start">
                 <span className="text-primary mr-3">•</span>
@@ -109,6 +109,74 @@ const Servis = () => {
                 <span>Zaškolení personálu</span>
               </li>
             </ul>
+
+            <h2 className="text-3xl font-bold mt-16 mb-6">Servis speciálních zařízení</h2>
+            <div className="bg-accent/30 p-8 rounded-lg mb-8">
+              <div className="flex items-start mb-4">
+                <ShieldCheck className="h-8 w-8 text-primary mr-4 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-semibold mb-3">Laminární boxy, izolátory a bariérové boxy</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Specializujeme se na komplexní servis laminárních boxů a izolátorů, včetně podtlakových izolátorů 
+                    a bariérových boxů pro práci s cytostatiky. Zajišťujeme bezpečné a spolehlivé fungování těchto 
+                    kritických zařízení pro ochranu personálu i produktů.
+                  </p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">→</span>
+                      <span>Servis a výměna HEPA filtrů v laminárních boxech a izolátorech</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">→</span>
+                      <span>Mechanický servis izolátorů pro ředění cytostatik a podtlakových izolátorů</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">→</span>
+                      <span>Aktualizace software a řídicích systémů zařízení</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">→</span>
+                      <span>Validace a kvalifikace po servisu (IQ, OQ, PQ)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">→</span>
+                      <span>Testy integrity filtrů a těsnosti komory</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-accent/30 p-8 rounded-lg">
+              <div className="flex items-start">
+                <Wrench className="h-8 w-8 text-primary mr-4 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-semibold mb-3">Digestoře a laboratorní přístroje</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Provádíme odborný servis digestoří a dalších velkých laboratorních přístrojů. Zajišťujeme 
+                    jejich bezpečný a efektivní provoz v souladu s příslušnými normami a předpisy.
+                  </p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">→</span>
+                      <span>Pravidelný servis digestoří a kontrola jejich funkčnosti</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">→</span>
+                      <span>Výměna filtrů a čištění systémů</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">→</span>
+                      <span>Měření výkonu odsávání a účinnosti zachycení par</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-2">→</span>
+                      <span>Renovace starších zařízení nebo poradenství při jejich likvidaci</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
             <div className="bg-primary/10 p-8 rounded-lg mt-12">
               <h3 className="text-2xl font-bold mb-4">Maximální ochrana vašeho majetku</h3>
