@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -22,19 +22,6 @@ const Contact = () => {
             <Card className="bg-gradient-card border-0 shadow-card">
               <CardHeader>
                 <CardTitle className="flex items-center text-foreground">
-                  <Phone className="h-6 w-6 text-primary mr-3" />
-                  Telefon
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-lg font-medium text-foreground">+420 987 654 321</p>
-                <p className="text-muted-foreground">Pondělí - Pátek: 8:00 - 17:00</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-card border-0 shadow-card">
-              <CardHeader>
-                <CardTitle className="flex items-center text-foreground">
                   <Mail className="h-6 w-6 text-primary mr-3" />
                   Email
                 </CardTitle>
@@ -55,21 +42,6 @@ const Contact = () => {
               <CardContent>
                 <p className="text-lg font-medium text-foreground">Česká republika</p>
                 <p className="text-muted-foreground">Působíme po celé ČR</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-card border-0 shadow-card">
-              <CardHeader>
-                <CardTitle className="flex items-center text-foreground">
-                  <Clock className="h-6 w-6 text-primary mr-3" />
-                  Pracovní doba
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-1">
-                  <p className="text-foreground"><span className="font-medium">Po-Pá:</span> 8:00 - 17:00</p>
-                  <p className="text-foreground"><span className="font-medium">So-Ne:</span> Pohotovost</p>
-                </div>
               </CardContent>
             </Card>
           </div>
