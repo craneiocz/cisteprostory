@@ -85,6 +85,14 @@ const MereniValidace = () => {
                 <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
                 <span>Bariérová pracoviště pro přípravu cytostatik</span>
               </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
+                <span>Automotive pracoviště</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
+                <span>Farmaci</span>
+              </li>
             </ul>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Odvětví, se kterými spolupracujeme</h2>
