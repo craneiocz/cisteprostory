@@ -108,6 +108,10 @@ const Servis = () => {
                 <span className="text-primary mr-3">•</span>
                 <span>Zaškolení personálu</span>
               </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-3">•</span>
+                <span>Dezinfekce vzduchotechniky</span>
+              </li>
             </ul>
 
             <h2 className="text-3xl font-bold mt-16 mb-6">Servis speciálních zařízení</h2>
