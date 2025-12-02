@@ -24,10 +24,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Služby</h3>
             <ul className="space-y-2">
-              <li><a href="#ciste-prostory" className="text-white/80 hover:text-primary transition-colors duration-200">Čisté prostory</a></li>
-              <li><a href="#vzduchotechnika" className="text-white/80 hover:text-primary transition-colors duration-200">Vzduchotechnika</a></li>
-              <li><a href="#mereni-validace" className="text-white/80 hover:text-primary transition-colors duration-200">Měření a validace</a></li>
-              <li><a href="#servis" className="text-white/80 hover:text-primary transition-colors duration-200">Servis</a></li>
+              <li><a href="/ciste-prostory" className="text-white/80 hover:text-primary transition-colors duration-200">Čisté prostory</a></li>
+              <li><a href="/vzduchotechnika" className="text-white/80 hover:text-primary transition-colors duration-200">Vzduchotechnika</a></li>
+              <li><a href="/mereni-a-validace" className="text-white/80 hover:text-primary transition-colors duration-200">Měření a validace</a></li>
+              <li><a href="/servis" className="text-white/80 hover:text-primary transition-colors duration-200">Servis</a></li>
             </ul>
           </div>
 
