@@ -49,14 +49,9 @@ const Footer = () => {
           <p className="text-white/60 text-sm">
             © 2025 Čisté Prostory. Všechna práva vyhrazena.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-white/60 hover:text-primary text-sm transition-colors duration-200">
-              Ochrana údajů
-            </a>
-            <a href="#" className="text-white/60 hover:text-primary text-sm transition-colors duration-200">
-              Obchodní podmínky
-            </a>
-          </div>
+          <a href="/ochrana-udaju" className="text-white/60 hover:text-primary text-sm transition-colors duration-200 mt-4 md:mt-0">
+            Ochrana osobních údajů
+          </a>
         </div>
       </div>
     </footer>
