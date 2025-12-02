@@ -8,6 +8,7 @@ import CisteProstory from "./pages/CisteProstory";
 import Vzduchotechnika from "./pages/Vzduchotechnika";
 import MereniValidace from "./pages/MereniValidace";
 import Servis from "./pages/Servis";
+import OchranaUdaju from "./pages/OchranaUdaju";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/vzduchotechnika" element={<Vzduchotechnika />} />
           <Route path="/mereni-a-validace" element={<MereniValidace />} />
           <Route path="/servis" element={<Servis />} />
+          <Route path="/ochrana-udaju" element={<OchranaUdaju />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
