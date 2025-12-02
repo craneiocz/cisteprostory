@@ -35,8 +35,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Kontakt</h3>
             <ul className="space-y-2">
-              <li className="text-white/80">info@cisteprostory.eu</li>
-              <li className="text-white/80">Česká republika</li>
+              <li className="text-white/80 font-medium">BRNO CREATIVE s.r.o.</li>
+              <li className="text-white/80">Lidická 700/19, 602 00 Brno</li>
+              <li className="text-white/80">IČO: 07367066</li>
+              <li className="text-white/80">DIČ: CZ07367066</li>
+              <li className="text-white/80">info@brnocreative.cz</li>
             </ul>
           </div>
         </div>
