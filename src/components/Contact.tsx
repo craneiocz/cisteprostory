@@ -1,8 +1,52 @@
-import { Mail, MapPin } from 'lucide-react';
+import { useState } from 'react';
+import { Mail, MapPin, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      message: formData.get('message') as string,
+    };
+
+    try {
+      const { data: response, error } = await supabase.functions.invoke('send-contact-form', {
+        body: data,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Zpráva odeslána",
+        description: "Děkujeme za váš zájem. V brzké době vás budeme kontaktovat.",
+      });
+
+      // Reset form
+      (e.target as HTMLFormElement).reset();
+    } catch (error: any) {
+      console.error('Error sending contact form:', error);
+      toast({
+        title: "Chyba při odesílání",
+        description: "Nepodařilo se odeslat zprávu. Zkuste to prosím znovu.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="kontakt" className="py-20 lg:py-32 bg-accent/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,11 +98,7 @@ const Contact = () => {
               </CardHeader>
               <CardContent className="p-8">
                 <p className="text-sm text-muted-foreground mb-4">* = povinný údaj</p>
-                <form className="space-y-6" onSubmit={(e) => {
-                  e.preventDefault();
-                  // TODO: Add form submission logic
-                  alert('Děkujeme za váš zájem. V brzké době vás budeme kontaktovat.');
-                }}>
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                       Jméno a příjmení *
@@ -68,7 +108,8 @@ const Contact = () => {
                       id="name"
                       name="name"
                       required
-                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
                       placeholder="Jan Novák"
                     />
                   </div>
@@ -82,7 +123,8 @@ const Contact = () => {
                       id="email"
                       name="email"
                       required
-                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
                       placeholder="jan.novak@example.com"
                     />
                   </div>
@@ -95,7 +137,8 @@ const Contact = () => {
                       type="tel"
                       id="phone"
                       name="phone"
-                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
                       placeholder="+420 123 456 789"
                     />
                   </div>
@@ -108,8 +151,9 @@ const Contact = () => {
                       id="message"
                       name="message"
                       required
+                      disabled={isSubmitting}
                       rows={5}
-                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none disabled:opacity-50"
                       placeholder="Napište nám váš dotaz..."
                     />
                   </div>
@@ -117,9 +161,17 @@ const Contact = () => {
                   <Button 
                     type="submit"
                     size="lg" 
+                    disabled={isSubmitting}
                     className="w-full bg-primary hover:bg-primary-dark text-white text-lg py-6"
                   >
-                    Odeslat
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                        Odesílám...
+                      </>
+                    ) : (
+                      'Odeslat'
+                    )}
                   </Button>
                 </form>
               </CardContent>

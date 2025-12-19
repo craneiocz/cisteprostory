@@ -11,7 +11,7 @@ const Footer = () => {
               <img 
                 src={logoImage} 
                 alt="Čisté Prostory - Vzduchotechnika, HEPA filtry, validace" 
-                className="h-12 w-auto"
+                className="h-12 w-auto brightness-0 invert"
               />
             </div>
             <p className="text-white/80 mb-4 max-w-md leading-relaxed">
