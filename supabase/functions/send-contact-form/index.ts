@@ -1,7 +1,9 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { Resend } from "npm:resend@2.0.0";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.2";
 
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
+const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -17,7 +19,6 @@ interface ContactFormRequest {
 }
 
 const handler = async (req: Request): Promise<Response> => {
-  // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
@@ -27,7 +28,6 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Received contact form submission:", { name, email, phone, message });
 
-    // Validate required fields
     if (!name || !email || !message) {
       console.error("Missing required fields");
       return new Response(
@@ -39,30 +39,54 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    // Send notification email to the company
-    const emailResponse = await resend.emails.send({
-      from: "Kontaktní formulář <onboarding@resend.dev>",
-      to: ["info@brnocreative.cz"],
-      subject: `Nová zpráva z webu od: ${name}`,
-      html: `
-        <h2>Nová zpráva z kontaktního formuláře</h2>
-        <p><strong>Jméno:</strong> ${name}</p>
-        <p><strong>E-mail:</strong> ${email}</p>
-        <p><strong>Telefon:</strong> ${phone || "Neuvedeno"}</p>
-        <hr />
-        <h3>Zpráva:</h3>
-        <p>${message.replace(/\n/g, "<br />")}</p>
-      `,
+    // Save to database
+    const supabase = createClient(SUPABASE_URL!, SUPABASE_SERVICE_ROLE_KEY!);
+    
+    const { error: dbError } = await supabase
+      .from("contact_submissions")
+      .insert({ name, email, phone, message });
+
+    if (dbError) {
+      console.error("Database error:", dbError);
+      throw new Error("Failed to save to database");
+    }
+
+    console.log("Contact submission saved to database");
+
+    // Send notification email
+    const emailRes = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+      },
+      body: JSON.stringify({
+        from: "Kontaktní formulář <onboarding@resend.dev>",
+        to: ["info@brnocreative.cz"],
+        subject: `Nová zpráva z webu od: ${name}`,
+        html: `
+          <h2>Nová zpráva z kontaktního formuláře</h2>
+          <p><strong>Jméno:</strong> ${name}</p>
+          <p><strong>E-mail:</strong> ${email}</p>
+          <p><strong>Telefon:</strong> ${phone || "Neuvedeno"}</p>
+          <hr />
+          <h3>Zpráva:</h3>
+          <p>${message.replace(/\n/g, "<br />")}</p>
+        `,
+      }),
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    if (!emailRes.ok) {
+      const errorText = await emailRes.text();
+      console.error("Email API error:", errorText);
+      // Don't throw - submission is saved, email is secondary
+    } else {
+      console.log("Email sent successfully");
+    }
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
-      headers: {
-        "Content-Type": "application/json",
-        ...corsHeaders,
-      },
+      headers: { "Content-Type": "application/json", ...corsHeaders },
     });
   } catch (error: any) {
     console.error("Error in send-contact-form function:", error);
