@@ -62,7 +62,7 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         from: "Kontaktní formulář <info@cisteprostory.eu>",
-        to: ["paukert.michal@gmail.com"],
+        to: ["info@cisteprostory.eu"],
         subject: `Nová zpráva z webu od: ${name}`,
         html: `
           <h2>Nová zpráva z kontaktního formuláře</h2>
