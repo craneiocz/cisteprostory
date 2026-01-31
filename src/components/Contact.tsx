@@ -3,7 +3,6 @@ import { Mail, MapPin, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -14,7 +13,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
-    const data = {
+    const payload = {
       name: formData.get('name') as string,
       email: formData.get('email') as string,
       phone: formData.get('phone') as string,
@@ -22,18 +21,25 @@ const Contact = () => {
     };
 
     try {
-      const { data: response, error } = await supabase.functions.invoke('send-contact-form', {
-        body: data,
+      // Přímé volání Supabase Edge Funkce pomocí fetch
+      const response = await fetch('https://qzkkmzjivvlwqlortxte.supabase.co/functions/v1/resend-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
       });
 
-      if (error) throw error;
+      if (!response.ok) {
+        throw new Error('Nepodařilo se odeslat email přes API');
+      }
 
       toast({
         title: "Zpráva odeslána",
         description: "Děkujeme za váš zájem. V brzké době vás budeme kontaktovat.",
       });
 
-      // Reset form
+      // Reset formuláře po úspěchu
       (e.target as HTMLFormElement).reset();
     } catch (error: any) {
       console.error('Error sending contact form:', error);
@@ -50,7 +56,6 @@ const Contact = () => {
   return (
     <section id="kontakt" className="py-20 lg:py-32 bg-accent/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
             Spojte se s <span className="text-primary">námi</span>
@@ -61,7 +66,7 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
+          {/* Kontaktní informace */}
           <div className="space-y-8">
             <Card className="bg-gradient-card border-0 shadow-card">
               <CardHeader>
@@ -90,7 +95,7 @@ const Contact = () => {
             </Card>
           </div>
 
-          {/* Contact Form */}
+          {/* Kontaktní formulář */}
           <div className="flex flex-col justify-center">
             <Card className="bg-gradient-card border-0 shadow-card">
               <CardHeader>
