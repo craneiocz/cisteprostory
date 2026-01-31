@@ -1,18 +1,12 @@
 import logoImage from '@/assets/cisteprostory-logo.png';
-
 const Footer = () => {
-  return (
-    <footer className="bg-foreground text-white py-12">
+  return <footer className="bg-foreground text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo & Company Info */}
           <div className="md:col-span-2">
             <div className="mb-4">
-              <img 
-                src={logoImage} 
-                alt="Čisté Prostory - Vzduchotechnika, HEPA filtry, validace" 
-                className="h-12 w-auto brightness-0 invert"
-              />
+              <img src={logoImage} alt="Čisté Prostory - Vzduchotechnika, HEPA filtry, validace" className="h-12 w-auto brightness-0 invert" />
             </div>
             <p className="text-white/80 mb-4 max-w-md leading-relaxed">
               Specializujeme se na vzduchotechniku, měření, validaci a servis čistých prostorů 
@@ -39,7 +33,7 @@ const Footer = () => {
               <li className="text-white/80">Lidická 700/19, 602 00 Brno</li>
               <li className="text-white/80">IČO: 07367066</li>
               <li className="text-white/80">DIČ: CZ07367066</li>
-              <li className="text-white/80">info@brnocreative.cz</li>
+              <li className="text-white/80">info@cisteprostory.eu</li>
             </ul>
           </div>
         </div>
@@ -54,8 +48,6 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
