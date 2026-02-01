@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="text-center">
           {/* SEO optimized main heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Čisté prostory
+            Realizace, servis a validace pro čisté prostory a vzduchotechniku
           </h1>
 
           {/* SEO enhanced subtitle with key services */}
