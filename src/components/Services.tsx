@@ -6,38 +6,38 @@ const Services = () => {
     {
       icon: Shield,
       title: 'Farmaceutické čisté prostory',
-      description: 'Zajišťujeme kompletní realizaci a údržbu čistých prostorů pro farmaceutický průmysl v souladu s ISO 14644-1, ISO 14644-2, EU GMP Annex 1 a EN 1822.',
-      features: ['Návrh a realizace podle ISO 14644 a EU GMP požadavků', 'Validace čistých prostor', 'Certifikace a dokumentace']
+      description: 'Zajišťujeme kompletní realizaci a údržbu čistých prostorů pro farmaceutický průmysl v souladu s ISO 14644-1, ISO 14644-2, EU GMP Annex 1 a EN 1822. Naše čisté prostory splňují nejpřísnější požadavky na kontrolu kontaminace a jsou navrženy tak, aby minimalizovaly riziko křížové kontaminace při výrobě léčiv. Specializujeme se na klasifikované prostory třídy A, B, C a D podle EU GMP, kde zajišťujeme správné tlakové kaskády, teplotní a vlhkostní parametry. Každý projekt je doprovázen kompletní dokumentací zahrnující DQ, IQ, OQ a PQ kvalifikace, které jsou nezbytné pro schválení regulačními orgány. Provádíme také pravidelné revalidace a roční testování čistých prostorů včetně měření počtu částic, testů integrity HEPA filtrů a mikrobiologického monitoringu.',
+      features: ['Návrh a realizace podle ISO 14644 a EU GMP požadavků', 'Validace čistých prostor', 'Certifikace a dokumentace', 'DQ, IQ, OQ, PQ kvalifikace', 'Pravidelné revalidace a roční testování']
     },
     {
       icon: Wind,
       title: 'Vzduchotechnika pro čisté prostory',
-      description: 'Projektujeme, dodáváme a instalujeme specializované vzduchotechnické systémy s HEPA a ULPA filtrací pro maximální čistotu vzduchu v souladu s normami ISO 14644-1, ISO 14644-2 a EN 1822.',
-      features: ['HEPA a ULPA filtry třídy H13, H14, U15', 'Laminární boxy a izolátory', 'Klimatizační jednotky s regulací']
+      description: 'Projektujeme, dodáváme a instalujeme specializované vzduchotechnické systémy s HEPA a ULPA filtrací pro maximální čistotu vzduchu v souladu s normami ISO 14644-1, ISO 14644-2 a EN 1822. Vzduchotechnika čistých prostor je klíčovým prvkem pro dosažení požadované třídy čistoty. Naše řešení zahrnují kompletní návrh distribuce vzduchu, výpočty výměny vzduchu a dimenzování filtračních systémů. Dodáváme HEPA filtry třídy H13 a H14 s účinností 99,95% až 99,995% a ULPA filtry třídy U15 pro nejnáročnější aplikace. Zajišťujeme montáž laminárních boxů, izolátorů pro práci s cytostatikami a bariérových systémů. Každá instalace je zakončena kompletním měřením a uvedením do provozu včetně ověření správné funkce všech komponent systému vzduchotechniky.',
+      features: ['HEPA filtry H13, H14 s účinností 99,95–99,995%', 'ULPA filtry U15 pro nejnáročnější aplikace', 'Laminární boxy a izolátory', 'Klimatizační jednotky s přesnou regulací', 'Kompletní projektová dokumentace']
     },
     {
       icon: Gauge,
-      title: 'Validace a měření',
-      description: 'Provádíme profesionální měření čistoty vzduchu a validace čistých prostorů podle ISO 14644-1, ISO 14644-2, EU GMP Annex 1 a EN 1822.',
-      features: ['Měření počtu částic a mikrobiologické kontroly', 'Kvalifikace IQ, OQ, PQ', 'Testy integrity filtrů a systémů', 'Měření teploty a vlhkosti', 'Měření objemu vzduchu a vzduchového výkonu (výkon VZT)']
+      title: 'Validace a měření čistých prostorů',
+      description: 'Provádíme profesionální měření čistoty vzduchu a validace čistých prostorů podle ISO 14644-1, ISO 14644-2, EU GMP Annex 1 a EN 1822. Validace dle ISO 14644 je nezbytná pro prokázání shody vašeho čistého prostoru s požadovanou třídou čistoty. Naši technici jsou vybaveni kalibrovými částicovými počítadly a dalšími měřicími přístroji pro komplexní hodnocení čistých prostorů. Provádíme měření počtu částic ve vzduchu, recovery testy, testy integrity HEPA filtrů metodou aerosol photometer, měření tlakových rozdílů, teploty, relativní vlhkosti a rychlosti proudění vzduchu. Součástí našich služeb je také mikrobiologický monitoring pomocí sedimentačních misek a aktivního vzorkování. Veškerá měření jsou dokumentována v protokolech, které splňují požadavky kontrolních orgánů.',
+      features: ['Měření počtu částic certifikovanými přístroji', 'Kvalifikace IQ, OQ, PQ', 'Testy integrity HEPA filtrů', 'Měření teploty, vlhkosti a tlakových rozdílů', 'Mikrobiologický monitoring']
     },
     {
       icon: Settings,
       title: 'Komplexní servis a údržba',
-      description: 'Nabízíme pravidelný servis, údržbu a výměnu HEPA filtrů včetně kompletního technického zázemí a havarijní služby. Provádíme servis laminárních boxů, izolátorů, digestoří a dalších laboratorních zařízení.',
-      features: ['Pravidelná údržba HEPA systémů', 'Výměna HEPA filtrů', 'Pohotovostní servis 24/7']
+      description: 'Nabízíme pravidelný servis, údržbu a výměnu HEPA filtrů včetně kompletního technického zázemí a havarijní služby. Provádíme servis laminárních boxů, izolátorů, digestoří a dalších laboratorních zařízení. Pravidelná údržba vzduchotechnických systémů je klíčová pro udržení požadované třídy čistoty a prodloužení životnosti zařízení. Naše servisní smlouvy zahrnují pravidelné kontroly, čištění a výměnu prefiltračních i HEPA filtrů v intervalech podle zatížení systému. Vedeme kompletní servisní dokumentaci pro potřeby auditů a inspekcí. V případě poruchy zajišťujeme pohotovostní servis 24/7 s rychlou odezvou po celé České republice a Slovensku. Specializujeme se také na servis izolátorů pro přípravu cytostatik a bariérových systémů pro aseptickou výrobu.',
+      features: ['Pravidelná údržba HEPA systémů', 'Výměna HEPA a ULPA filtrů', 'Servis laminárních boxů a izolátorů', 'Pohotovostní servis 24/7', 'Kompletní servisní dokumentace']
     },
     {
       icon: BookOpen,
       title: 'Odborné poradenství a konzultace',
-      description: 'Poskytujeme expertní poradenství při návrhu, optimalizaci a provozu čistých prostorů pro různá průmyslová odvětví v souladu s ISO 14644-1, ISO 14644-2 a EU GMP Annex 1.',
-      features: ['Konzultace pro ISO a EU GMP compliance', 'Optimalizace provozu a nákladů', 'Školení personálu']
+      description: 'Poskytujeme expertní poradenství při návrhu, optimalizaci a provozu čistých prostorů pro různá průmyslová odvětví v souladu s ISO 14644-1, ISO 14644-2 a EU GMP Annex 1. Naši konzultanti mají dlouholeté zkušenosti s realizací čistých prostorů ve farmacii, zdravotnictví, elektronice i potravinářství. Pomáháme s přípravou User Requirement Specification (URS), výběrem vhodného dodavatele a dozorem nad realizací. Provádíme analýzy rizik (FMEA) a gap analýzy stávajících prostor vůči aktuálním předpisům. Nabízíme školení personálu v oblasti správného chování v čistých prostorech, oblékání do speciálních oděvů a hygienických postupů. Naše služby zahrnují také přípravu na audity a inspekce regulačních orgánů.',
+      features: ['Konzultace pro ISO a EU GMP compliance', 'Příprava URS a výběrová řízení', 'Analýzy rizik a gap analýzy', 'Školení personálu', 'Příprava na audity a inspekce']
     },
     {
       icon: Thermometer,
-      title: 'HVAC systémy (vzduchotechnika, topení a chlazení) a klimatizace',
-      description: 'Dodáváme a servisujeme komplexní HVAC systémy s přesnou kontrolou teploty, vlhkosti a čistoty vzduchu pro kritické prostory podle ISO 14644-1 a ISO 14644-2.',
-      features: ['Klimatizační systémy s řízenou vlhkostí', 'Regulace tlakových gradientů', 'Monitoring a automatizace']
+      title: 'HVAC systémy a klimatizace',
+      description: 'Dodáváme a servisujeme komplexní HVAC systémy s přesnou kontrolou teploty, vlhkosti a čistoty vzduchu pro kritické prostory podle ISO 14644-1 a ISO 14644-2. Systémy vzduchotechniky, topení a chlazení jsou páteří každého čistého prostoru a jejich správný návrh je zásadní pro dosažení požadovaných parametrů. Navrhujeme systémy s přesnou regulací teploty v rozmezí ±0,5°C a relativní vlhkosti ±5%. Zajišťujeme správné nastavení tlakových kaskád mezi jednotlivými zónami pro zabránění křížové kontaminace. Naše řešení zahrnují energeticky efektivní rekuperační jednotky a systémy automatického řízení (BMS) pro monitoring a záznam všech kritických parametrů. Provádíme také mapování teplotních a vlhkostních profilů pro skladovací prostory.',
+      features: ['Klimatizační systémy s řízenou vlhkostí', 'Přesná regulace teploty ±0,5°C', 'Tlakové kaskády mezi zónami', 'Energeticky efektivní rekuperace', 'BMS monitoring a automatizace']
     }
   ];
 
@@ -47,11 +47,13 @@ const Services = () => {
         {/* SEO optimized section header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Profesionální <span className="text-primary">služby pro čisté prostory</span>
+            Komplexní <span className="text-primary">služby pro čisté prostory</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Poskytujeme <strong>komplexní řešení čistých prostorů pro farmaceutický průmysl, nemocnice a laboratoře</strong> včetně 
-            vzduchotechniky, HEPA filtrů, validace a servisu v souladu s normami ISO 14644 – Čisté prostory a související řízená prostředí, EU GMP a příslušnými normami pro filtry
+            Poskytujeme <strong>kompletní řešení vzduchotechniky čistých prostorů</strong> včetně návrhu, realizace, 
+            <a href="/mereni-a-validace" className="text-primary hover:underline"> validace dle ISO 14644</a>, dodávky 
+            <a href="/vzduchotechnika" className="text-primary hover:underline"> HEPA filtrů H13/H14</a> a 
+            <a href="/servis" className="text-primary hover:underline"> komplexního servisu</a>. Naše služby splňují normy ISO 14644, EU GMP Annex 1 a EN 1822.
           </p>
         </div>
 
