@@ -1,5 +1,4 @@
-import { ArrowRight, Shield, Wind, Gauge, Settings } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Shield, Wind, Gauge, Settings } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -13,14 +12,12 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center">
-          {/* SEO optimized main heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Realizace, servis a validace pro čisté prostory a vzduchotechniku
+            Čisté prostory, laboratorní boxy a validace vzduchotechniky
           </h1>
 
-          {/* SEO enhanced subtitle with key services */}
-          <p className="text-xl md:text-2xl mb-16 text-white/90 max-w-4xl mx-auto leading-relaxed">
-            Specializujeme se na <strong>vzduchotechniku čistých prostorů, HEPA filtry, měření čistoty vzduchu, validaci</strong> a komplexní servis pro farmacie, nemocnice, laboratoře, elektroniku, automotive a vesmírný průmysl v souladu s normami <strong>ISO 14644-1, ISO 14644-2, EU GMP Annex 1 a EN 1822</strong>
+          <p className="text-xl md:text-2xl mb-16 text-white/90 max-w-3xl mx-auto leading-relaxed">
+            Realizujeme <strong>čisté prostory</strong>, dodáváme <strong>laboratorní boxy</strong> a provádíme <strong>validace dle ISO 14644</strong> a <strong>EU GMP Annex 1</strong>. Servis HEPA filtrů H13/H14 po celé ČR.
           </p>
 
           {/* Services Icons */}

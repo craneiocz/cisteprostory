@@ -21,25 +21,18 @@ const Contact = () => {
     };
 
     try {
-      // Přímé volání Supabase Edge Funkce pomocí fetch
       const response = await fetch('https://qzkkmzjivvlwqlortxte.supabase.co/functions/v1/resend-email', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
 
-      if (!response.ok) {
-        throw new Error('Nepodařilo se odeslat email přes API');
-      }
+      if (!response.ok) throw new Error('Nepodařilo se odeslat email přes API');
 
       toast({
         title: "Zpráva odeslána",
         description: "Děkujeme za váš zájem. V brzké době vás budeme kontaktovat.",
       });
-
-      // Reset formuláře po úspěchu
       (e.target as HTMLFormElement).reset();
     } catch (error: any) {
       console.error('Error sending contact form:', error);
@@ -58,15 +51,14 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Spojte se s <span className="text-primary">námi</span>
+            Kontaktujte <span className="text-primary">nás</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Rádi zodpovíme vaše otázky a připravíme nabídku na míru vašim potřebám
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Připravíme nabídku na míru – čisté prostory, validace nebo servis
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Kontaktní informace */}
           <div className="space-y-8">
             <Card className="bg-gradient-card border-0 shadow-card">
               <CardHeader>
@@ -95,88 +87,32 @@ const Contact = () => {
             </Card>
           </div>
 
-          {/* Kontaktní formulář */}
           <div className="flex flex-col justify-center">
             <Card className="bg-gradient-card border-0 shadow-card">
               <CardHeader>
-                <CardTitle className="text-2xl text-foreground">Kontaktní formulář</CardTitle>
+                <h3 className="text-2xl font-bold text-foreground">Kontaktní formulář</h3>
               </CardHeader>
               <CardContent className="p-8">
                 <p className="text-sm text-muted-foreground mb-4">* = povinný údaj</p>
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                      Jméno a příjmení *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      disabled={isSubmitting}
-                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
-                      placeholder="Jan Novák"
-                    />
+                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">Jméno a příjmení *</label>
+                    <input type="text" id="name" name="name" required disabled={isSubmitting} className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50" placeholder="Jan Novák" />
                   </div>
-
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                      E-mail *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      disabled={isSubmitting}
-                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
-                      placeholder="jan.novak@example.com"
-                    />
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">E-mail *</label>
+                    <input type="email" id="email" name="email" required disabled={isSubmitting} className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50" placeholder="jan.novak@example.com" />
                   </div>
-
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                      Telefon
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      disabled={isSubmitting}
-                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
-                      placeholder="+420 123 456 789"
-                    />
+                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">Telefon</label>
+                    <input type="tel" id="phone" name="phone" disabled={isSubmitting} className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50" placeholder="+420 123 456 789" />
                   </div>
-
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      Zpráva *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      disabled={isSubmitting}
-                      rows={5}
-                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none disabled:opacity-50"
-                      placeholder="Napište nám váš dotaz..."
-                    />
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">Zpráva *</label>
+                    <textarea id="message" name="message" required disabled={isSubmitting} rows={4} className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none disabled:opacity-50" placeholder="Napište nám váš dotaz..." />
                   </div>
-
-                  <Button 
-                    type="submit"
-                    size="lg" 
-                    disabled={isSubmitting}
-                    className="w-full bg-primary hover:bg-primary-dark text-white text-lg py-6"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                        Odesílám...
-                      </>
-                    ) : (
-                      'Odeslat'
-                    )}
+                  <Button type="submit" size="lg" disabled={isSubmitting} className="w-full bg-primary hover:bg-primary-dark text-white text-lg py-6">
+                    {isSubmitting ? (<><Loader2 className="mr-2 h-5 w-5 animate-spin" />Odesílám...</>) : ('Odeslat')}
                   </Button>
                 </form>
               </CardContent>
