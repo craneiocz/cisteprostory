@@ -21,7 +21,7 @@ const Contact = () => {
     };
 
     try {
-      const response = await fetch('https://qzkkmzjivvlwqlortxte.supabase.co/functions/v1/resend-email', {
+      const response = await fetch('https://api.cisteprostory.eu/email.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
