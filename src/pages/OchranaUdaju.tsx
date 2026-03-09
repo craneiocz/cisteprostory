@@ -78,14 +78,7 @@ const OchranaUdaju = () => {
               </p>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">7. Cookies</h2>
-              <p>
-                Naše webové stránky mohou používat cookies pro zajištění správné funkčnosti 
-                a zlepšení uživatelského zážitku. Cookies jsou malé textové soubory ukládané 
-                ve vašem prohlížeči.
-              </p>
-            </section>
+
 
             <p className="text-sm text-muted-foreground mt-12">
               Tyto zásady ochrany osobních údajů jsou platné od 1. 1. 2025.
