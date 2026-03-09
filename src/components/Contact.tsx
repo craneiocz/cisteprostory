@@ -111,6 +111,10 @@ const Contact = () => {
                     <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">Zpráva *</label>
                     <textarea id="message" name="message" required disabled={isSubmitting} rows={4} className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none disabled:opacity-50" placeholder="Napište nám váš dotaz..." />
                   </div>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Odesláním formuláře beru na vědomí, že společnost BRNO CREATIVE s.r.o. zpracovává mé osobní údaje za účelem vyřízení dotazu/poptávky v souladu s GDPR. Více informací naleznete v{' '}
+                    <a href="/ochrana-udaju" className="text-primary underline hover:text-primary/80">Ochrana osobních údajů</a>.
+                  </p>
                   <Button type="submit" size="lg" disabled={isSubmitting} className="w-full bg-primary hover:bg-primary-dark text-white text-lg py-6">
                     {isSubmitting ? (<><Loader2 className="mr-2 h-5 w-5 animate-spin" />Odesílám...</>) : ('Odeslat')}
                   </Button>
