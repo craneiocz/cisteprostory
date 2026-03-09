@@ -12,49 +12,44 @@ const OchranaUdaju = () => {
           
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-8">
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">1. Správce osobních údajů</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">1. Kdo jsme</h2>
               <p>
                 Správcem osobních údajů je společnost <strong>BRNO CREATIVE s.r.o.</strong>, 
-                se sídlem Lidická 700/19, 602 00 Brno, IČO: 07367066, DIČ: CZ07367066 
-                (dále jen „správce").
+                se sídlem Lidická 700/19, 602 00 Brno, IČO: 07367066, DIČ: CZ07367066.
               </p>
               <p>
-                Kontaktní údaje správce: <a href="mailto:info@brnocreative.cz" className="text-primary hover:underline">info@brnocreative.cz</a>
+                Kontaktní e-mail: <a href="mailto:info@cisteprostory.eu" className="text-primary hover:underline">info@cisteprostory.eu</a>
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">2. Rozsah zpracování osobních údajů</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">2. Jaké údaje sbíráme</h2>
               <p>
-                Zpracováváme pouze osobní údaje, které nám sami poskytnete v rámci komunikace s námi, 
-                zejména prostřednictvím kontaktního formuláře nebo e-mailu. Jedná se především o:
+                Zpracováváme pouze údaje, které nám sami poskytnete prostřednictvím kontaktního formuláře nebo e-mailu:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Jméno a příjmení</li>
                 <li>E-mailová adresa</li>
                 <li>Telefonní číslo (pokud ho uvedete)</li>
-                <li>Název společnosti (pokud ho uvedete)</li>
                 <li>Obsah vaší zprávy</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">3. Účel zpracování</h2>
-              <p>Vaše osobní údaje zpracováváme za účelem:</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Odpovědi na vaše dotazy a požadavky</li>
-                <li>Poskytování informací o našich službách</li>
-                <li>Přípravy cenových nabídek</li>
-                <li>Plnění smluvních závazků</li>
-              </ul>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">3. Proč údaje sbíráme</h2>
+              <p>
+                Vaše osobní údaje zpracováváme výhradně za účelem vyřízení vašeho dotazu nebo poptávky 
+                týkající se čistých prostor, laboratorních boxů, validací nebo vzduchotechniky. 
+                Údaje využíváme k odpovědi na váš dotaz, přípravě cenové nabídky a případnému plnění smlouvy.
+              </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">4. Právní základ zpracování</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">4. Předáváme údaje třetím stranám?</h2>
               <p>
-                Právním základem pro zpracování vašich osobních údajů je váš souhlas udělený 
-                odesláním kontaktního formuláře nebo e-mailu, případně plnění smlouvy nebo 
-                jednání o uzavření smlouvy.
+                Ne, vaše osobní údaje nikomu neprodáváme ani nepředáváme třetím stranám. 
+                Údaje mohou být zpracovávány pouze prostřednictvím technických nástrojů nezbytných 
+                pro provoz webu (hosting, e-mailový server), a to vždy v souladu s GDPR.
               </p>
             </section>
 
@@ -62,47 +57,33 @@ const OchranaUdaju = () => {
               <h2 className="text-2xl font-semibold text-foreground mb-4">5. Doba uchovávání údajů</h2>
               <p>
                 Osobní údaje uchováváme po dobu nezbytně nutnou k naplnění účelu jejich zpracování, 
-                maximálně však po dobu 3 let od posledního kontaktu, pokud zákon nestanoví delší 
-                dobu uchovávání.
+                maximálně však po dobu 3 let od posledního kontaktu, pokud zákon nestanoví jinak.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">6. Vaše práva</h2>
-              <p>V souvislosti se zpracováním vašich osobních údajů máte následující práva:</p>
+              <p>V souvislosti se zpracováním vašich osobních údajů máte právo:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Právo na přístup</strong> – máte právo získat informace o tom, jaké údaje o vás zpracováváme</li>
-                <li><strong>Právo na opravu</strong> – můžete požádat o opravu nepřesných údajů</li>
-                <li><strong>Právo na výmaz</strong> – můžete požádat o smazání vašich údajů</li>
-                <li><strong>Právo na omezení zpracování</strong> – můžete požádat o omezení zpracování vašich údajů</li>
-                <li><strong>Právo na přenositelnost</strong> – máte právo získat své údaje ve strukturovaném formátu</li>
-                <li><strong>Právo odvolat souhlas</strong> – svůj souhlas můžete kdykoliv odvolat</li>
-                <li><strong>Právo podat stížnost</strong> – máte právo podat stížnost u Úřadu pro ochranu osobních údajů</li>
+                <li><strong>Na přístup</strong> – zjistit, jaké údaje o vás evidujeme</li>
+                <li><strong>Na opravu</strong> – požádat o opravu nepřesných údajů</li>
+                <li><strong>Na výmaz</strong> – požádat o smazání vašich údajů</li>
+                <li><strong>Na omezení zpracování</strong> – požádat o omezení zpracování</li>
+                <li><strong>Odvolat souhlas</strong> – svůj souhlas můžete kdykoliv odvolat</li>
+                <li><strong>Podat stížnost</strong> – u Úřadu pro ochranu osobních údajů (ÚOOÚ)</li>
               </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">7. Zabezpečení údajů</h2>
-              <p>
-                Přijali jsme vhodná technická a organizační opatření k ochraně vašich osobních údajů 
-                před neoprávněným přístupem, ztrátou, zničením nebo pozměněním.
+              <p className="mt-4">
+                Pro uplatnění jakéhokoliv práva nám stačí napsat na{' '}
+                <a href="mailto:info@cisteprostory.eu" className="text-primary hover:underline">info@cisteprostory.eu</a>.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">8. Cookies</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">7. Cookies</h2>
               <p>
                 Naše webové stránky mohou používat cookies pro zajištění správné funkčnosti 
                 a zlepšení uživatelského zážitku. Cookies jsou malé textové soubory ukládané 
                 ve vašem prohlížeči.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">9. Kontakt</h2>
-              <p>
-                V případě jakýchkoliv dotazů ohledně zpracování vašich osobních údajů 
-                nás kontaktujte na e-mailu: <a href="mailto:info@brnocreative.cz" className="text-primary hover:underline">info@brnocreative.cz</a>
               </p>
             </section>
 
