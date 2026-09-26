@@ -19,7 +19,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg md:text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed text-balance font-light text-white/88">
-            Navrhujeme a ověřujeme čisté prostory, filtrační systémy a měřicí postupy podle účelu provozu. Propojujeme technické řešení s dokumentací, uvedením do provozu a následnou kontrolou.
+            Navrhujeme, realizujeme a ověřujeme čisté prostory pro laboratoře, zdravotnictví, farmacii a výrobu. Propojujeme technické řešení s dokumentací, uvedením do provozu a následnou kontrolou.
           </p>
 
           <p className="mb-12 text-sm uppercase tracking-[0.22em] text-white/70">Návrh · měření · dokumentace · servis</p>

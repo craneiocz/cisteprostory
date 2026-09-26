@@ -54,6 +54,13 @@ const validationFaq = [
   ['Jaké dokumenty jsou součástí výstupu?', 'Výstup odpovídá sjednanému rozsahu. Obsahuje identifikaci měřeného prostoru, podmínky a metody, použitá měřidla, naměřené hodnoty, vyhodnocení, odchylky a závěr.'],
 ] as const;
 
+const validationOptions = [
+  ['Jednorázové měření', 'Ověření vybraného parametru v konkrétním provozním stavu a záznam naměřených hodnot.'],
+  ['První validace', 'Měřicí plán, více zkoušek, vyhodnocení kritérií a protokol pro nový nebo upravený prostor.'],
+  ['Revalidace', 'Opakované ověření po změně filtrace, vzduchotechniky, dispozice, procesu nebo provozního režimu.'],
+  ['IQ, OQ a PQ', 'Kvalifikační kroky pro instalaci, provozní funkce a výkon prostoru nebo zařízení při používání.'],
+] as const;
+
 const MereniValidace = () => (
   <div className="min-h-screen bg-background">
     <PageSchema
@@ -68,6 +75,8 @@ const MereniValidace = () => (
     <ServiceHero eyebrow="02 / Validace a měření" title="Validace čistých prostor a měření podle ISO 14644" description="Validace čistých prostor spojuje měřicí plán, kvalifikační zkoušky a protokol. Rozsah stanovujeme podle klasifikace prostoru, provozního stavu a konkrétního procesu." links={[{ href: '/pocet-castic-iso-14644', label: 'Počet částic podle ISO 14644' }, { href: '/integrita-hepa-filtru', label: 'Integrita HEPA filtrů' }]} />
     <main>
       <section className="border-b border-border py-20 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">03 / Rozsah</p><h2 className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">Co znamená validace čistých prostor</h2></div><div className="max-w-3xl text-lg leading-relaxed text-muted-foreground"><p>Validace není název jednoho měření. Jde o dokumentovaný postup, který propojuje požadavky, měřicí plán, zkoušky, akceptační kritéria a vyhodnocení výsledků pro konkrétní prostor a proces.</p><p className="mt-6">Jednotlivé měření ověřuje vybraný parametr v daném okamžiku. Validace skládá potřebná měření a kvalifikační kroky do celku, ze kterého je zřejmé, co se ověřovalo, za jakých podmínek a s jakým výsledkem.</p></div></div></section>
+
+      <section className="bg-accent/20 py-16 lg:py-20" aria-labelledby="validacni-rozsah"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr]"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">03 / Volba služby</p><h2 id="validacni-rozsah" className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">Jaký rozsah ověření potřebujete</h2></div><div><p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">Rozsah stanovujeme pro laboratoře, zdravotnictví, farmacii i výrobní provozy podle účelu prostoru, klasifikace, změn v zařízení a požadovaného výstupu.</p><div className="mt-10 overflow-x-auto"><table className="w-full min-w-[38rem] border-collapse text-left"><thead><tr className="border-y border-border"><th scope="col" className="px-4 py-4 text-sm font-semibold text-foreground">Potřeba zákazníka</th><th scope="col" className="px-4 py-4 text-sm font-semibold text-foreground">Výstup</th></tr></thead><tbody>{validationOptions.map(([title, text]) => <tr key={title} className="border-b border-border align-top"><th scope="row" className="px-4 py-4 text-base font-semibold text-foreground">{title}</th><td className="px-4 py-4 leading-relaxed text-muted-foreground">{text}</td></tr>)}</tbody></table></div></div></div></div></section>
 
       <section className="bg-accent/20 py-20 lg:py-28"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div className="mb-12 max-w-2xl"><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">04 / Zkoušky</p><h2 className="mt-5 text-3xl font-bold tracking-tight md:text-5xl">Co může validace čistých prostor zahrnovat</h2></div><div className="grid border-y border-border md:grid-cols-2 lg:grid-cols-3">{parameters.map(([title, text], index) => <article key={title} className="border-b border-border p-7 md:even:border-l lg:p-9"><span className="font-mono text-xs text-primary">0{index + 1}</span><h3 className="mt-6 text-xl font-semibold text-foreground">{title}</h3><p className="mt-3 leading-relaxed text-muted-foreground">{text}</p></article>)}</div></div></section>
 
