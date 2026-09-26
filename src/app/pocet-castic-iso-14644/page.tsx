@@ -2,99 +2,49 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Gauge, CheckCircle, ListChecks } from 'lucide-react';
+import PageSchema from '@/components/PageSchema';
+import ServiceCrossLink from '@/components/ServiceCrossLink';
+import ServiceHero from '@/components/ServiceHero';
+import { CheckCircle2, Gauge, ListChecks } from 'lucide-react';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Měření počtu částic ISO 14644-1 – klasifikace čistoty vzduchu | cisteprostory.eu',
-  description:
-    'Měření koncentrace částic ve vzduchu a klasifikace tříd čistoty ISO 1 až ISO 9 dle ČSN EN ISO 14644-1. Validace čistých prostorů, laminárních boxů a izolátorů.',
-};
+export const metadata: Metadata = createPageMetadata({ path: '/pocet-castic-iso-14644', title: 'Měření počtu částic podle ISO 14644-1 | cisteprostory.eu', description: 'Měření koncentrace částic a klasifikace čistoty vzduchu podle ISO 14644-1 pro čisté prostory, laminární boxy a izolátory.' });
 
 const classes = [
-  { name: 'ISO 5', use: 'Kritické operace, plnění sterilních přípravků, laminární boxy třídy A' },
-  { name: 'ISO 6–7', use: 'Přípravna sterilních léčiv, čisté prostory tříd B–C dle GMP' },
-  { name: 'ISO 8', use: 'Podpůrné a přechodové prostory, čisté prostory třídy D dle GMP' },
-];
+  ['ISO 1–3', 'Nejpřísnější prostředí pro vysoce citlivé procesy a specializovanou výrobu. Konkrétní použití určuje procesní zadání.'],
+  ['ISO 4–5', 'Kritická pracovní místa, laminární proudění a operace s vysokými nároky na koncentraci částic.'],
+  ['ISO 6–7', 'Přípravné a podpůrné zóny, laboratoře a výroba podle citlivosti procesu a režimu provozu.'],
+  ['ISO 8–9', 'Přechodové, podpůrné a výrobní prostory s řízenou, ale méně přísnou koncentrací částic.'],
+] as const;
 
-export default function PocetCasticIso14644() {
-  return (
-    <div className="min-h-screen bg-background">
-      <Header />
-
-      <section className="bg-gradient-hero text-white py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Měření počtu částic ISO 14644-1</h1>
-          <p className="text-xl text-white/90 max-w-3xl">
-            Klasifikace čistoty vzduchu podle koncentrace částic ve vzduchu — základní měření pro
-            zařazení prostoru do třídy čistoty ISO 1 až ISO 9.
-          </p>
+const PocetCasticIso14644 = () => (
+  <div className="min-h-screen bg-background">
+    <PageSchema
+      path="/pocet-castic-iso-14644"
+      title="Měření počtu částic podle ISO 14644-1"
+      description="Měření koncentrace částic a klasifikace čistoty vzduchu podle ISO 14644-1 v čistých prostorech, boxech a izolátorech."
+      serviceName="Měření počtu částic"
+      serviceDescription="Klasifikace čistoty vzduchu podle měřicího plánu a provozního stavu zařízení."
+    />
+    <Header />
+    <ServiceHero eyebrow="02 / ISO 14644" title="Měření počtu částic podle ISO 14644-1" description="Klasifikace čistoty vzduchu podle koncentrace částic v definovaných bodech a provozních podmínkách." links={[{ href: '/mereni-a-validace', label: 'Kompletní měření a validace' }, { href: '/integrita-hepa-filtru', label: 'Integrita HEPA filtrů' }]} />
+    <main>
+      <section className="border-b border-border py-20 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">03 / Význam</p><h2 className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">Co měření počtu částic ukazuje</h2></div><div className="max-w-3xl text-lg leading-relaxed text-muted-foreground"><p>Měření počtu částic je základní zkouškou pro klasifikaci čistých prostorů podle ČSN EN ISO 14644-1. Kalibrovaným laserovým čítačem se v určených bodech sleduje koncentrace částic vybraných referenčních velikostí, například 0,5 µm a dalších velikostí podle třídy a použité metodiky.</p><p className="mt-6">Naměřené hodnoty se neposuzují izolovaně. Protokol musí uvést prostor, provozní stav, měřicí body, přístroj, podmínky, referenční velikosti, limity a způsob vyhodnocení.</p></div></div></section>
+      <section className="bg-accent/20 py-20 lg:py-28"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div className="mb-12 max-w-2xl"><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">04 / Klasifikace</p><h2 className="mt-5 text-3xl font-bold tracking-tight md:text-5xl">Třídy čistoty ISO 1 až ISO 9</h2><p className="mt-5 text-lg leading-relaxed text-muted-foreground">Číslo ISO třídy není univerzální známka kvality celého provozu. Třída se volí podle citlivosti produktu, operace, personálu a provozního stavu.</p></div><div className="grid border-y border-border md:grid-cols-2">{classes.map(([name, use], index) => <article key={name} className="border-b border-border p-7 md:even:border-l lg:p-10"><div className="flex items-start justify-between"><Gauge className="h-8 w-8 text-primary" aria-hidden="true" /><span className="font-mono text-xs text-primary">0{index + 1}</span></div><h3 className="mt-8 text-2xl font-semibold">{name}</h3><p className="mt-4 leading-relaxed text-muted-foreground">{use}</p></article>)}</div></div></section>
+      <section className="bg-foreground py-20 text-background lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary-light">05 / Provozní stav</p><h2 className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">At rest a in operation</h2></div><div className="grid gap-8 md:grid-cols-2"><div className="border-t border-background/20 pt-5"><span className="font-mono text-sm text-primary-light">01</span><h3 className="mt-6 text-2xl font-semibold">At rest</h3><p className="mt-4 leading-relaxed text-background/70">Prostor je připraven k měření, ale neprobíhá v něm běžná operace nebo není přítomen obvyklý počet pracovníků.</p></div><div className="border-t border-background/20 pt-5"><span className="font-mono text-sm text-primary-light">02</span><h3 className="mt-6 text-2xl font-semibold">In operation</h3><p className="mt-4 leading-relaxed text-background/70">Zařízení, pracovníci a proces pracují v definovaném provozním režimu. Volba stavu ovlivňuje výsledek i interpretaci.</p></div></div></div></section>
+      <section className="py-20 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">06 / Kontrola</p><h2 className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">Kdy měření provádět</h2></div><ol className="border-t border-border">{['Při počáteční klasifikaci nového nebo upraveného prostoru.', 'Při periodické kontrole podle interního plánu a rizikovosti provozu.', 'Po výměně filtrů, zásahu do vzduchotechniky nebo změně dispozice.', 'Při hledání příčiny odchylky nebo zhoršení provozních výsledků.'].map((item, index) => <li key={item} className="flex gap-5 border-b border-border py-6"><span className="font-mono text-sm text-primary">0{index + 1}</span><span className="leading-relaxed text-muted-foreground">{item}</span></li>)}</ol></div></section>
+      <section className="bg-accent/20 py-20 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">07 / Výstup</p><h2 className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">Co obsahuje protokol</h2></div><div><ul className="grid gap-4 sm:grid-cols-2">{['Identifikaci prostoru, zón a provozního stavu.', 'Měřicí body a referenční velikosti částic.', 'Použitý čítač, kalibraci a podmínky měření.', 'Naměřené hodnoty, limity a vyhodnocení.', 'Odchylky a doporučení pro další kontrolu.'].map((item) => <li key={item} className="flex gap-3 border-t border-border pt-4 leading-relaxed text-muted-foreground"><CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />{item}</li>)}</ul><div className="mt-10 border-l-2 border-primary pl-5 text-base leading-relaxed text-foreground"><ListChecks className="mb-3 h-6 w-6 text-primary" aria-hidden="true" />Měření částic neověřuje automaticky těsnost HEPA filtru ani správné tlakové kaskády. Tyto zkoušky se plánují samostatně nebo jako součást širší validace.</div><p className="mt-8 leading-relaxed text-muted-foreground">Pro širší rozsah pokračujte na <Link href="/mereni-a-validace" className="font-semibold text-primary underline underline-offset-4">měření a validaci čistých prostor</Link>.</p></div></div></section>
+      <section className="border-b border-border py-16" aria-labelledby="odborne-castice">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">Navazující informace</p>
+          <h2 id="odborne-castice" className="mt-4 text-3xl font-bold tracking-tight text-foreground">Jak číst výsledek měření v souvislostech</h2>
+          <p className="mt-5 max-w-3xl leading-relaxed text-muted-foreground">Praktické srovnání měření částic s kontrolou integrity filtru a návazností na servisní rozhodnutí obsahuje <Link href="/ciste-prostory/integrita-hepa-filtru-a-pocet-castic" className="font-semibold text-primary underline underline-offset-4">průvodce kontrolou HEPA filtru a částic</Link>.</p>
         </div>
       </section>
+    </main>
+    <ServiceCrossLink />
+    <Footer />
+  </div>
+);
 
-      <section className="py-16 lg:py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Měření počtu částic je základní zkouškou pro klasifikaci čistých prostorů dle normy
-              ČSN EN ISO 14644-1. Kalibrovaným laserovým čítačem částic měříme koncentraci
-              částic o velikosti 0,5 µm a dalších referenčních velikostí ve stanovených bodech
-              prostoru a porovnáváme naměřené hodnoty s limity příslušné třídy čistoty.
-            </p>
-
-            <h2 className="text-3xl font-bold mt-12 mb-6">Kdy měření provádíme</h2>
-            <ul className="space-y-3 text-lg text-muted-foreground mb-12">
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>V klidovém stavu (&quot;at rest&quot;) — prostor bez provozu a personálu</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>Za provozu (&quot;in operation&quot;) — se zapojeným zařízením a přítomným personálem</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>Při počáteční validaci i periodické revalidaci prostoru</span>
-              </li>
-            </ul>
-
-            <h2 className="text-3xl font-bold mt-12 mb-6">Příklady tříd čistoty</h2>
-            <div className="space-y-4 mb-12">
-              {classes.map((c) => (
-                <div key={c.name} className="flex items-start gap-4 bg-accent/30 p-6 rounded-lg">
-                  <Gauge className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-lg font-semibold">{c.name}</h3>
-                    <p className="text-muted-foreground">{c.use}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="bg-primary/5 border border-primary/20 rounded-lg p-8 mb-8">
-              <div className="flex items-start gap-4">
-                <ListChecks className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Součást komplexní validace</h3>
-                  <p className="text-muted-foreground">
-                    Měření počtu částic obvykle kombinujeme s testem integrity HEPA filtrů,
-                    měřením rychlosti proudění vzduchu a tlakových rozdílů. Prohlédněte si{' '}
-                    <Link href="/integrita-hepa-filtru" className="text-primary underline">
-                      test integrity HEPA filtrů
-                    </Link>{' '}
-                    nebo{' '}
-                    <Link href="/mereni-a-validace" className="text-primary underline">
-                      kompletní nabídku validací a měření
-                    </Link>
-                    .
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  );
-}
+export default PocetCasticIso14644;

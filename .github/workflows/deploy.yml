@@ -1,8 +1,16 @@
-name: Deploy to Vercel
+name: Build and deploy to FTP
 
 on:
   push:
-    branches: [master, main]
+    branches: [main, master]
+  workflow_dispatch:
+
+concurrency:
+  group: ftp-production
+  cancel-in-progress: true
+
+permissions:
+  contents: read
 
 jobs:
   deploy:
@@ -14,16 +22,27 @@ jobs:
       - name: Nastavení Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
+          cache: npm
 
-      - name: Instalace Vercel CLI
-        run: npm install --global vercel@latest
+      - name: Instalace závislostí
+        run: npm ci
 
-      - name: Stažení nastavení prostředí z Vercelu
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Kontrola zdrojů
+        run: npm run lint
 
-      - name: Build projektu na Vercelu
-        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Statický build
+        run: npm run build
 
-      - name: Deploy na Vercel (produkce)
-        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Nasazení exportu přes FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ secrets.FTP_PROTOCOL || 'ftps' }}
+          port: ${{ secrets.FTP_PORT || 21 }}
+          local-dir: ./out/
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          dangerous-clean-slate: false
+          log-level: standard

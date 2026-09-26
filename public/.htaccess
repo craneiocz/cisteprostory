@@ -1,0 +1,70 @@
+Options -MultiViews
+RewriteEngine On
+
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^www\.cisteprostory\.eu$ [NC]
+RewriteRule ^ https://www.cisteprostory.eu%{REQUEST_URI} [R=301,L]
+
+
+# Serve nested Next RSC payloads from the exported route folder.
+RewriteRule ^([^/]+)/__next\.([^/]+)\.__PAGE__\.txt$ /$1/__next.$2/__PAGE__.txt [L]
+
+# Prefer the generated HTML page for pretty URLs, even when a same-named
+# directory exists in the Next export output.
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ /$1.html [L,QSA]
+
+# Preserve exported files and folders such as /_next/, /robots.txt, and /assets/.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 month"
+ExpiresByType text/html "access plus 0 seconds"
+ExpiresByType text/plain "access plus 0 seconds"
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType text/javascript "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 year"
+ExpiresByType application/json "access plus 0 seconds"
+ExpiresByType application/xml "access plus 1 day"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/avif "access plus 1 year"
+ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Compress text assets before they are sent to the browser. Brotli is preferred
+# by modern browsers; Gzip remains available as a fallback on older servers.
+<IfModule mod_brotli.c>
+AddOutputFilterByType BROTLI_COMPRESS text/css
+AddOutputFilterByType BROTLI_COMPRESS text/html
+AddOutputFilterByType BROTLI_COMPRESS text/javascript
+AddOutputFilterByType BROTLI_COMPRESS text/plain
+AddOutputFilterByType BROTLI_COMPRESS application/javascript
+AddOutputFilterByType BROTLI_COMPRESS application/json
+AddOutputFilterByType BROTLI_COMPRESS application/xml
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/json
+AddOutputFilterByType DEFLATE application/xml
+</IfModule>
+
+<IfModule mod_headers.c>
+Header merge Vary Accept-Encoding
+Header always set Strict-Transport-Security "max-age=31536000"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "camera=(), geolocation=(), microphone=()"
+Header always set Content-Security-Policy-Report-Only "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; font-src 'self' data:; connect-src 'self' https://api.cisteprostory.eu https://www.google-analytics.com https://region1.google-analytics.com"
+</IfModule>

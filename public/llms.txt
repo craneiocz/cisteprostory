@@ -1,0 +1,50 @@
+# Čisté prostory
+
+> Praktické informace a služby pro návrh, měření, uvedení do provozu a servis čistých prostor v České republice.
+
+## O webu
+
+Čisté prostory jsou řízená prostředí, ve kterých se podle procesu kontroluje zejména koncentrace částic, tlak, teplota, vlhkost a proudění vzduchu. Web vysvětluje, jak spolu souvisí zadání, filtrace, měření, dokumentace a servis.
+
+Provozovatel: BRNO CREATIVE s.r.o.
+Kontakt: info@cisteprostory.eu
+Web: https://www.cisteprostory.eu
+
+## Hlavní stránky
+
+- [Návrh čistých prostor](https://www.cisteprostory.eu/ciste-prostory): proces, dispozice, filtrace, uvedení do provozu a výstupní podklady.
+- [Měření a validace](https://www.cisteprostory.eu/mereni-a-validace): měřicí plán, částice, tlak, proudění, teplota, vlhkost a integrita HEPA filtrů.
+- [Vzduchotechnika](https://www.cisteprostory.eu/vzduchotechnika): přívod a odvod vzduchu, filtrace, tlakové kaskády, regulace a servisní přístup.
+- [Test integrity HEPA filtrů](https://www.cisteprostory.eu/integrita-hepa-filtru): kontrola média, rámu, těsnění a uložení filtru.
+- [Měření počtu částic](https://www.cisteprostory.eu/pocet-castic-iso-14644): klasifikace čistoty vzduchu podle ISO 14644-1.
+- [Servis čistých prostor](https://www.cisteprostory.eu/servis): údržba filtrů, zařízení, boxů a dokumentace s návazností na kontrolní měření.
+- [O společnosti](https://www.cisteprostory.eu/o-nas): provozovatel webu a pravidla pro odborný obsah.
+
+## Rozhodovací průvodci
+
+- [Zadání a rozpočet](https://www.cisteprostory.eu/ciste-prostory/navrh-a-rozpocet): vstupy, hranice dodávky a provozní náklady.
+- [Materiály a dispozice](https://www.cisteprostory.eu/ciste-prostory/materialy-povrchy-a-dispozice): povrchy, dveře, prostupy a pohyb osob a materiálu.
+- [IQ, OQ a PQ](https://www.cisteprostory.eu/mereni-a-validace/iq-oq-pq): návaznost kvalifikačních fází a dokumentace.
+- [Revalidace a intervaly](https://www.cisteprostory.eu/mereni-a-validace/revalidace-a-intervaly): plán kontrol a změny vyžadující nové ověření.
+- [Tlaková kaskáda a proudění](https://www.cisteprostory.eu/vzduchotechnika/tlakova-kaskada-a-proudeni): bilance vzduchu, tlakové vazby a regenerace.
+- [Výměna HEPA filtru](https://www.cisteprostory.eu/servis/vymena-hepa-filtru): odstávka, montáž, test integrity a servisní záznam.
+
+## Technické okruhy
+
+- ISO 14644 a třídy čistoty ISO 1 až ISO 9.
+- EU GMP Annex 1 a požadavky na řízené prostředí ve farmaceutických provozech.
+- HEPA a ULPA filtrace, test integrity a servisní přístup.
+- Tlakové kaskády, proudění vzduchu, teplota a relativní vlhkost.
+- IQ, OQ a PQ jako části kvalifikace zařízení a provozu.
+- Rozdíl mezi celým čistým prostorem, laminárním boxem, laboratorním boxem a izolátorem.
+- Měřicí plán, validační protokol, odchylky a doporučení pro další provoz.
+
+## Doporučený kontext
+
+Informace na webu slouží jako odborný úvod a podklad pro přípravu zadání. Konkrétní třída čistoty, rozsah měření, návrh filtrace a validační dokumentace se určují podle procesu, dispozice, provozního režimu a požadavků objednatele.
+
+## Technické soubory
+
+- [Sitemap](https://www.cisteprostory.eu/sitemap.xml)
+- [Robots](https://www.cisteprostory.eu/robots.txt)
+- [Ochrana osobních údajů](https://www.cisteprostory.eu/ochrana-udaju)

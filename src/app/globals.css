@@ -17,8 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Brand colors based on Čisté Prostory logo - professional muted teal */
-    --primary: 183 56% 44%; /* Muted teal from actual logo */
+    --primary: 183 56% 44%;
     --primary-foreground: 0 0% 100%;
     --primary-light: 183 56% 54%;
     --primary-dark: 183 56% 34%;
@@ -39,11 +38,10 @@ All colors MUST be HSL.
     --input: 214.3 31.8% 91.4%;
     --ring: 183 56% 44%;
 
-    /* Custom design tokens - professional medical/laboratory theme */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--background)), hsl(var(--accent)));
-    --shadow-elegant: 0 8px 25px -8px hsl(var(--primary) / 0.12);
-    --shadow-card: 0 2px 12px -2px hsl(var(--primary) / 0.08);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), #31a9af);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--accent)));
+    --shadow-elegant: 0 18px 36px -26px hsl(222.2 47.4% 11.2% / 0.18);
+    --shadow-card: 0 10px 24px -22px hsl(222.2 47.4% 11.2% / 0.14);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
@@ -66,13 +64,13 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222.2 47.4% 8%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 222.2 47.4% 10%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 222.2 47.4% 10%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 183 56% 54%;
@@ -96,10 +94,10 @@ All colors MUST be HSL.
     --input: 217.2 32.6% 17.5%;
     --ring: 183 56% 54%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), #31a9af);
     --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--accent)));
-    --shadow-elegant: 0 8px 25px -8px hsl(var(--primary) / 0.15);
-    --shadow-card: 0 2px 12px -2px hsl(var(--primary) / 0.1);
+    --shadow-elegant: 0 18px 36px -26px hsl(var(--primary) / 0.26);
+    --shadow-card: 0 10px 24px -22px hsl(210 40% 98% / 0.16);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -111,12 +109,80 @@ All colors MUST be HSL.
   }
 }
 
+#cookie-consent-root #cc-main {
+  --cc-bg: hsl(var(--background));
+  --cc-primary-color: hsl(var(--foreground));
+  --cc-secondary-color: hsl(var(--muted-foreground));
+  --cc-btn-primary-bg: hsl(var(--primary));
+  --cc-btn-primary-color: hsl(var(--primary-foreground));
+  --cc-btn-primary-border-color: hsl(var(--primary));
+  --cc-btn-primary-hover-bg: hsl(var(--primary-dark));
+  --cc-btn-primary-hover-border-color: hsl(var(--primary-dark));
+  --cc-btn-secondary-bg: hsl(var(--accent));
+  --cc-btn-secondary-color: hsl(var(--accent-foreground));
+  --cc-btn-secondary-border-color: hsl(var(--border));
+  --cc-btn-secondary-hover-bg: hsl(var(--primary) / 0.1);
+  --cc-btn-secondary-hover-border-color: hsl(var(--primary) / 0.35);
+  --cc-separator-border-color: hsl(var(--border));
+  --cc-footer-bg: hsl(var(--accent) / 0.6);
+  --cc-footer-color: hsl(var(--muted-foreground));
+  --cc-footer-border-color: hsl(var(--border));
+  --cc-modal-border-radius: 1rem;
+  --cc-btn-border-radius: 0.5rem;
+  --cc-modal-margin: 1.25rem;
+  font-family: inherit;
+}
+
+#cookie-consent-root #cc-main .cm {
+  border: 1px solid hsl(var(--primary) / 0.2);
+  box-shadow: 0 24px 70px hsl(222.2 47.4% 11.2% / 0.18);
+}
+
+#cookie-consent-root #cc-main .cm__title,
+#cookie-consent-root #cc-main .pm__title {
+  letter-spacing: -0.02em;
+}
+
+#cookie-consent-root #cc-main .cm__desc,
+#cookie-consent-root #cc-main .pm__section-desc {
+  line-height: 1.6;
+}
+
+#cookie-consent-root #cc-main .cm__btn,
+#cookie-consent-root #cc-main .pm__btn {
+  min-height: 44px;
+  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+#cookie-consent-root #cc-main .cm__btn:hover,
+#cookie-consent-root #cc-main .pm__btn:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  #cookie-consent-root #cc-main {
+    --cc-modal-margin: 0.5rem;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+    background-image:
+      radial-gradient(circle at top, hsl(var(--primary) / 0.05), transparent 28%),
+      linear-gradient(180deg, hsl(0 0% 100%), hsl(var(--background)));
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.14);
+    color: hsl(var(--foreground));
   }
 }
