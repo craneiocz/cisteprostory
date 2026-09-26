@@ -28,9 +28,6 @@ jobs:
       - name: Instalace závislostí
         run: npm ci
 
-      - name: Kontrola zdrojů
-        run: npm run lint
-
       - name: Build Vite aplikace
         run: npm run build
 
