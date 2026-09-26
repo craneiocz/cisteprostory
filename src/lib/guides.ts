@@ -27,7 +27,7 @@ export const guides = {
     parentPath: '/ciste-prostory',
     parentLabel: 'Návrh a realizace',
     eyebrow: 'Návrh a rozpočet',
-    title: 'Jak připravit zadání a rozpočet čistého prostoru',
+    title: 'Zadání a rozpočet čistého prostoru',
     description:
       'Vstupy pro technický návrh a rozpočet čistého prostoru: proces, třída čistoty, dispozice, filtrace, dokumentace a provozní náklady.',
     intro:
@@ -35,7 +35,7 @@ export const guides = {
     ctaLabel: 'Připravit zadání projektu',
     ctaText:
       'Do poptávky uveďte účel prostoru, předpokládanou plochu, proces, požadované parametry a termín. Nejasné body společně oddělíme od závazného zadání.',
-    lastModified: '2026-08-28',
+    lastModified: '2026-09-26',
     sections: [
       {
         id: 'proces',
@@ -97,7 +97,7 @@ export const guides = {
     parentPath: '/ciste-prostory',
     parentLabel: 'Návrh a realizace',
     eyebrow: 'Materiály a dispozice',
-    title: 'Materiály, povrchy a dispozice čistých prostor',
+    title: 'Povrchy a dispozice čistých prostor',
     description:
       'Jak při návrhu čistého prostoru posoudit stěny, stropy, podlahy, dveře, prostupy, čistitelnost a pohyb osob a materiálu.',
     intro:
@@ -105,7 +105,7 @@ export const guides = {
     ctaLabel: 'Konzultovat dispozici a povrchy',
     ctaText:
       'Připravte půdorys, popis procesu, používané čisticí prostředky a seznam zařízení. Návrh pak může řešit skutečné styky a prostupy místo obecných materiálových požadavků.',
-    lastModified: '2026-08-28',
+    lastModified: '2026-09-26',
     sections: [
       {
         id: 'dispozice',
@@ -239,7 +239,7 @@ export const guides = {
     parentPath: '/mereni-a-validace',
     parentLabel: 'Měření a validace',
     eyebrow: 'Revalidace',
-    title: 'Revalidace čistých prostor a volba intervalů',
+    title: 'Revalidace čistých prostor: intervaly',
     description:
       'Jak stanovit intervaly kontrol čistého prostoru a kdy opakovat měření po změně procesu, filtrace, dispozice nebo provozního režimu.',
     intro:
@@ -247,7 +247,7 @@ export const guides = {
     ctaLabel: 'Naplánovat revalidaci',
     ctaText:
       'Připravte poslední protokol, změny od předchozího měření a provozní záznamy. Rozsah kontroly pak lze navázat na skutečné riziko a historii zařízení.',
-    lastModified: '2026-08-28',
+    lastModified: '2026-09-26',
     sections: [
       {
         id: 'plan',
@@ -303,7 +303,7 @@ export const guides = {
     parentPath: '/vzduchotechnika',
     parentLabel: 'Vzduchotechnika',
     eyebrow: 'Tlaková kaskáda',
-    title: 'Tlaková kaskáda a proudění v čistém prostoru',
+    title: 'Tlaková kaskáda a proudění',
     description:
       'Návrh tlakových vazeb, přívodu a odvodu vzduchu, proudění, regenerace a provozních režimů čistého prostoru.',
     intro:
@@ -311,7 +311,7 @@ export const guides = {
     ctaLabel: 'Posoudit proudění a tlakové vazby',
     ctaText:
       'Pro technické posouzení připravte půdorys, směry požadovaného proudění, provozní režimy a dostupné hodnoty průtoků a tlaků.',
-    lastModified: '2026-08-28',
+    lastModified: '2026-09-26',
     sections: [
       {
         id: 'ucel',

@@ -62,7 +62,7 @@ const MereniValidace = () => (
       description="Měřicí plán, kvalifikační zkoušky a protokol pro ověření čistého prostoru podle ISO 14644 a provozního zadání."
       serviceName="Validace čistých prostor a měření"
       serviceDescription="Měření, kvalifikační zkoušky a protokol podle ISO 14644 a konkrétního provozního zadání."
-      dateModified="2026-08-30"
+      dateModified="2026-09-26"
     />
     <Header />
     <ServiceHero eyebrow="02 / Validace a měření" title="Validace čistých prostor a měření podle ISO 14644" description="Validace čistých prostor spojuje měřicí plán, kvalifikační zkoušky a protokol. Rozsah stanovujeme podle klasifikace prostoru, provozního stavu a konkrétního procesu." links={[{ href: '/pocet-castic-iso-14644', label: 'Počet částic podle ISO 14644' }, { href: '/integrita-hepa-filtru', label: 'Integrita HEPA filtrů' }]} />
@@ -93,7 +93,7 @@ const MereniValidace = () => (
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">12 / Zdroje a souvislosti</p>
           <h2 id="validace-zdroje" className="mt-4 text-3xl font-bold tracking-tight text-foreground">Primární podklady pro stanovení rozsahu</h2>
-          <p className="mt-5 max-w-3xl leading-relaxed text-muted-foreground">Konkrétní požadavky se určují podle použitelného předpisu, provozu a schváleného zadání. Základní rámec poskytuje <a href="https://www.iso.org/standard/53394.html" target="_blank" rel="noreferrer" className="font-semibold text-primary underline underline-offset-4">ISO 14644-1</a> a pro farmaceutickou kvalifikaci také <a href="https://sukl.gov.cz/pokyny-ustavu/pokyny-vyroba-leciv/vyr-32-doplnek-15-verze-1/" target="_blank" rel="noreferrer" className="font-semibold text-primary underline underline-offset-4">SÚKL VYR-32, doplněk 15</a>.</p>
+          <p className="mt-5 max-w-3xl leading-relaxed text-muted-foreground">Konkrétní požadavky se určují podle použitelného předpisu, provozu a schváleného zadání. Základní rámec poskytuje <a href="https://www.iso.org/standard/53394.html" target="_blank" rel="noreferrer" className="font-semibold text-primary underline underline-offset-4">ISO 14644-1</a>; pro farmaceutický provoz lze vycházet také z <a href="https://www.sukl.cz/uploads/pokyny_a_formulare/vyr/vyr_36.pdf" target="_blank" rel="noreferrer" className="font-semibold text-primary underline underline-offset-4">pokynu SÚKL VYR-36 pro čisté prostory</a> a z <a href="https://sukl.gov.cz/pokyny-ustavu/pokyny-vyroba-leciv/vyr-32-doplnek-15-verze-1/" target="_blank" rel="noreferrer" className="font-semibold text-primary underline underline-offset-4">SÚKL VYR-32, doplňku 15</a> pro kvalifikaci a validaci.</p>
           <p className="mt-5 max-w-3xl leading-relaxed text-muted-foreground">Pokud se připravuje nový provoz, navazuje validace na <Link href="/ciste-prostory" className="font-semibold text-primary underline underline-offset-4">návrh a realizaci čistých prostor</Link>.</p>
         </div>
       </section>

@@ -11,7 +11,7 @@ import { createPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createPageMetadata({
   path: '/vzduchotechnika',
-  title: 'Vzduchotechnika čistých prostor a HEPA filtrace | cisteprostory.eu',
+  title: 'Vzduchotechnika čistých prostor | cisteprostory.eu',
   description: 'Návrh, montáž a servis vzduchotechniky čistých prostor s HEPA a ULPA filtrací, tlakovými kaskádami, regulací teploty, vlhkosti a proudění.',
 });
 

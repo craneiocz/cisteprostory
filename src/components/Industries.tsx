@@ -10,9 +10,9 @@ const Industries = () => {
     },
     {
       icon: HeartPulse,
-      title: 'Nemocnice a laboratoře',
+      title: 'Zdravotnictví a laboratoře',
       description: 'Laboratorní a laminární boxy, izolátory a technická podpora pro pracoviště s požadavky na ochranu produktu, pracovníka nebo okolí.',
-      alt: 'laboratorní boxy pro nemocnice'
+      alt: 'laboratorní boxy pro zdravotnictví a laboratoře'
     },
     {
       icon: FlaskConical,
