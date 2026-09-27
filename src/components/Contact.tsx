@@ -19,7 +19,7 @@ const Contact = () => {
       name: formData.get('name') as string,
       email: formData.get('email') as string,
       phone: formData.get('phone') as string,
-      message: `[Služba: ${formData.get('service') as string}] ${formData.get('message') as string}`,
+      message: formData.get('message') as string,
     };
 
     try {
@@ -118,17 +118,6 @@ const Contact = () => {
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">Telefon</label>
                     <input type="tel" id="phone" name="phone" disabled={isSubmitting} className="w-full rounded-md border border-input bg-background px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50" placeholder="+420 123 456 789" />
-                  </div>
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-foreground mb-2">Co potřebujete řešit? *</label>
-                    <select id="service" name="service" required disabled={isSubmitting} defaultValue="" className="w-full rounded-md border border-input bg-background px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50">
-                      <option value="" disabled>Vyberte službu</option>
-                      <option value="Návrh a realizace čistého prostoru">Návrh a realizace čistého prostoru</option>
-                      <option value="Měření a validace">Měření a validace</option>
-                      <option value="Vzduchotechnika a filtrace">Vzduchotechnika a filtrace</option>
-                      <option value="Servis a výměna filtru">Servis a výměna filtru</option>
-                      <option value="Jiný technický dotaz">Jiný technický dotaz</option>
-                    </select>
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">Zpráva *</label>
